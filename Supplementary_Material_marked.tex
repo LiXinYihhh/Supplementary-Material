@@ -1,0 +1,1284 @@
+\documentclass{article}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL F:\00_·ÖÀàÕûÀí\10_¿ÆÑÐÏîÄ¿\article-R1\final_comment5_20261012\paper\SI_R1_revised_1.tex   Mon Oct 12 14:47:02 2026
+%DIF ADD F:\¹È¸èÏÂÔØ\SI.tex                                                                        Sat Oct 17 08:39:36 2026
+
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[left]{lineno}
+
+% 行号样式，可选
+\renewcommand\linenumberfont{\normalfont\tiny\sffamily\color{gray}}
+\setlength\linenumbersep{6pt}
+\usepackage{tabularx}
+\usepackage{longtable}
+%DIF 16a16
+\usepackage{pdflscape} %DIF > 
+%DIF -------
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage[section]{placeins}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theHfigure}{S\arabic{figure}}
+\renewcommand{\theHtable}{S\arabic{table}}
+
+\title{Supplementary Material for Hippocampal Controllability across Clinically Defined Alzheimer's Disease-Related Groups: Associations with Structural Network Topology and Group Discrimination}
+\author{}
+\date{}
+\modulolinenumbers[1]
+\linenumbers
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF CFONT PREAMBLE %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}#1}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red} \scriptsize #1}} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+% Submission markup: revised text is yellow; newly added text is blue.
+\definecolor{YELLOW}{rgb}{1,1,0}
+\setlength{\emergencystretch}{4em}
+\providecommand{\DIFchgtex}[1]{{\setlength{\fboxsep}{0pt}\colorbox{yellow}{\strut #1}}}
+\providecommand{\DIFchg}[1]{\texorpdfstring{\DIFchgtex{#1}\allowbreak}{#1}}
+\providecommand{\DIFchgFL}[1]{\DIFchg{#1}}
+\providecommand{\DIFchgbegin}{}
+\providecommand{\DIFchgend}{}
+\providecommand{\DIFchgbeginFL}{}
+\providecommand{\DIFchgendFL}{}
+
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_CFONT %DIF PREAMBLE
+  moredelim=[il][\color{red}\scriptsize]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\sffamily]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}[1][]{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}[1][]{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+\lstset{extendedchars=\true,inputencoding=utf8}
+
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+\maketitle
+
+\section{Supplementary Methods}
+
+Throughout the Supplementary Material, BH-FDR-adjusted \(p\) values are denoted by \(p_{\mathrm{FDR}}\), whereas unadjusted and permutation \(p\) values are denoted by \(p\) and \(p_{\mathrm{perm}}\), respectively.
+
+\subsection{Cortical and Structural-Connectivity Visualizations}
+For descriptive cortical visualization, ROI-level average and modal controllability values were averaged within each clinical group and mapped to the Schaefer2018 cortical surface using a common color scale (Supplementary Fig.~S1). Group-averaged structural connectivity matrices were also used to visualize hippocampal connections and connections between Tian atlas-defined non-cortical structures and the seven Schaefer networks. Only relatively high-weight connections were retained for display; this visualization threshold was not used in any inferential analysis. Mean connectivity between each atlas-defined structure group and cortical network was summarized in heatmaps (Supplementary Fig.~S2).
+
+\subsection{Classification Analyses}
+The four binary tasks were CN versus AD, SMC versus MCI, MCI versus AD, and CN versus SMC.  \DIFchgbegin \DIFchg{Six} \DIFchgend low-dimensional feature sets were \DIFchgbegin \DIFchg{examined:} \DIFchgend global, left, and right hippocampal controllability; bilateral FreeSurfer hippocampal volume; hippocampal strength and betweenness ; and their six-feature combination.  \DIFchgbegin \DIFchg{Controllability} \DIFchg{predictors} \DIFchg{were} \DIFchg{within-subject} \DIFchg{ranks,} \DIFchg{volume} \DIFchg{and} \DIFchg{topology} \DIFchg{were} \DIFchg{unranked,} \DIFchg{and} \DIFchg{the} \DIFchg{combined} \DIFchg{model} \DIFchg{contained} \DIFchg{both} \DIFchg{scales.} \DIFchg{The} \DIFchg{24} \DIFchg{task--feature} \DIFchg{combinations} \DIFchg{were} \DIFchg{exploratory} \DIFchg{and} \DIFchg{formed} \DIFchg{one} \DIFchg{Holm-corrected} \DIFchg{family.} \DIFchgend All models used  \DIFchgbegin \DIFchg{inverse-frequency-balanced} \DIFchgend \(L_2\)-regularized logistic regression  \DIFchgbegin \DIFchg{and} \DIFchg{the} \DIFchg{same} \DIFchg{covariates:} \DIFchg{age,} \DIFchg{sex,} \DIFchg{and} \DIFchg{education;} \DIFchg{ICV} \DIFchg{was} \DIFchg{not} \DIFchg{a} \DIFchg{classification} \DIFchg{covariate.} \DIFchg{Ten} \DIFchg{repetitions} \DIFchg{of} \DIFchg{five-fold} \DIFchg{stratified} \DIFchg{outer} \DIFchg{cross-validation} \DIFchg{generated} \DIFchg{held-out} \DIFchg{probabilities,} \DIFchg{while} \DIFchgend four-fold stratified inner cross-validation  \DIFchgbegin \DIFchg{selected} \DIFchg{\(C\in\{0.01,0.1,1,10\}\).} \DIFchg{Covariate} \DIFchg{residualization} \DIFchg{and} \DIFchg{standardization} \DIFchg{were} \DIFchg{fitted} \DIFchg{within} \DIFchg{each} \DIFchg{inner-training} \DIFchg{partition} \DIFchg{during} \DIFchg{hyperparameter} \DIFchg{selection} \DIFchg{and} \DIFchg{refitted} \DIFchg{on} \DIFchg{the} \DIFchg{corresponding} \DIFchg{outer-training} \DIFchg{data} \DIFchg{before} \DIFchg{held-out} \DIFchg{prediction.} \DIFchg{Each} \DIFchg{participant's} \DIFchgend 10  \DIFchgbegin \DIFchg{held-out} \DIFchg{probabilities} \DIFchg{were} \DIFchg{averaged} \DIFchg{arithmetically} \DIFchg{before} \DIFchg{calculation} \DIFchg{of} \DIFchg{one} \DIFchg{subject-level} \DIFchg{AUC.}
+
+
+\DIFchg{Classifier} \DIFchg{significance} \DIFchg{used} \DIFchg{1,000} \DIFchg{complete-pipeline} \DIFchg{label} \DIFchg{permutations} \DIFchg{for} \DIFchg{every} \DIFchg{task--feature} \DIFchg{combination.} \DIFchg{Labels} \DIFchg{were} \DIFchg{permuted} \DIFchg{before} \DIFchgend cross-validation;  \DIFchgbegin \DIFchg{every} \DIFchg{permutation} \DIFchg{reran} \DIFchg{the} \DIFchg{full} \DIFchg{repeated} \DIFchg{nested} \DIFchg{procedure,} \DIFchg{including} \DIFchg{foldwise} \DIFchg{residualization,} \DIFchg{standardization,} \DIFchg{inner} \DIFchg{selection} \DIFchg{of} \DIFchg{\(C\),} \DIFchg{model} \DIFchg{refitting,} \DIFchg{and} \DIFchg{outer} \DIFchg{prediction.} \DIFchg{Permutation} \DIFchg{\(p\)} \DIFchg{values} \DIFchg{used} \DIFchg{the} \DIFchg{plus-one} \DIFchg{correction.} \DIFchgend AUC confidence intervals  \DIFchgbegin \DIFchg{used} \DIFchg{5}\DIFchgend ,000 \DIFchgbegin \DIFchg{group-stratified} \DIFchgend bootstrap resamples of \DIFchgbegin \DIFchg{the} \DIFchg{fixed} \DIFchgend subject-level \DIFchgbegin \DIFchg{mean} \DIFchgend out-of-fold  \DIFchgbegin \DIFchg{probabilities.} \DIFchg{These} \DIFchg{intervals} \DIFchg{quantify} \DIFchg{subject-sampling} \DIFchg{uncertainty} \DIFchg{conditional} \DIFchg{on} \DIFchg{the} \DIFchg{fitted} \DIFchg{predictions} \DIFchg{and} \DIFchg{do} \DIFchg{not} \DIFchg{fully} \DIFchg{capture} \DIFchg{training-set} \DIFchg{variability;} \DIFchg{the} \DIFchg{mean,} \DIFchg{standard} \DIFchg{deviation,} \DIFchg{and} \DIFchg{range} \DIFchg{of} \DIFchg{the} \DIFchg{10} \DIFchg{repeat-specific} \DIFchg{AUCs} \DIFchg{are} \DIFchg{reported} \DIFchg{in} \DIFchg{Table~II.} \DIFchg{Direct} \DIFchg{candidate-versus-volume} \DIFchg{comparisons} \DIFchg{reran} \DIFchg{both} \DIFchg{models} \DIFchg{in} \DIFchg{the} \DIFchg{same} \DIFchg{complete-case} \DIFchg{sample} \DIFchg{using} \DIFchg{identical} \DIFchg{splits} \DIFchg{and} \DIFchg{the} \DIFchg{same} \DIFchg{random} \DIFchg{seed} \DIFchg{as} \DIFchg{Table~II.} \DIFchg{Paired} \DIFchg{AUC} \DIFchg{differences} \DIFchg{used} \DIFchgend 5,000  \DIFchgbegin \DIFchg{group-stratified} \DIFchg{bootstrap} \DIFchg{resamples} \DIFchg{and} \DIFchg{subject-level} \DIFchg{score-swap} \DIFchg{tests;} \DIFchg{the} \DIFchg{20} \DIFchg{comparisons} \DIFchg{formed} \DIFchg{a} \DIFchg{separate} \DIFchg{Holm-corrected} \DIFchg{family} \DIFchg{(Supplementary} \DIFchg{Table~\ref{tab:paired_volume_classification}).} \DIFchg{The} \DIFchg{high-dimensional} \DIFchg{connectivity} \DIFchg{analysis} \DIFchg{remains} \DIFchg{exploratory;} \DIFchg{its} \DIFchg{previous} \DIFchg{fixed-score} \DIFchg{permutation} \DIFchg{values} \DIFchg{are} \DIFchg{removed} \DIFchg{and} \DIFchg{only} \DIFchg{descriptive} \DIFchg{AUC} \DIFchg{estimates} \DIFchg{are} \DIFchg{retained.}
+
+
+\begingroup
+\color{blue}
+\def\DIFchg#1{#1}
+\def\DIFadd#1{#1}
+\let\DIFchgbegin\relax
+\let\DIFchgend\relax
+\let\DIFaddbegin\relax
+\let\DIFaddend\relax
+\subsection{\DIFchg{Primary} \DIFchg{Rank} \DIFchg{Endpoints} \DIFchg{and} \DIFchg{Unranked-Value} \DIFchg{Sensitivity} \DIFchg{Analyses}}
+\DIFchg{The} \DIFchg{primary} \DIFchg{endpoints} \DIFchg{were} \DIFchg{mean} \DIFchg{within-subject} \DIFchg{ranks:} \DIFchg{nodal} \DIFchg{average} \DIFchg{and} \DIFchg{modal} \DIFchg{controllability} \DIFchg{were} \DIFchg{ranked} \DIFchg{separately} \DIFchg{from} \DIFchgend 1 \DIFchgbegin \DIFchg{to} \DIFchg{450} \DIFchg{within} \DIFchg{each} \DIFchg{participant} \DIFchg{and} \DIFchg{then} \DIFchg{averaged} \DIFchg{across} \DIFchg{the} \DIFchg{bilateral} \DIFchg{hippocampal} \DIFchg{parcels.} \DIFchg{Adjusted} \DIFchg{group} \DIFchg{means,} \DIFchg{95\%} \DIFchg{confidence} \DIFchg{intervals,} \DIFchg{and} \DIFchg{partial} \DIFchg{\(\eta^2\)} \DIFchg{were} \DIFchg{obtained} \DIFchg{from} \DIFchg{the} \DIFchg{full} \DIFchg{group-plus-demographics} \DIFchg{models} \DIFchg{using} \DIFchg{5}\DIFchgend ,000  \DIFchgbegin \DIFchg{group-stratified} \DIFchg{bootstrap} \DIFchg{resamples.} \DIFchg{Six} \DIFchg{pairwise} \DIFchg{contrasts} \DIFchg{per} \DIFchg{endpoint} \DIFchg{were} \DIFchg{tested} \DIFchg{with} \DIFchg{two-sided} \DIFchg{Freedman--Lane} \DIFchg{permutations} \DIFchg{and} \DIFchg{controlled} \DIFchg{jointly} \DIFchg{as} \DIFchg{one} \DIFchg{12-test} \DIFchg{BH-FDR} \DIFchg{family.}
+
+
+\DIFchg{Unranked} \DIFchg{bilateral} \DIFchg{hippocampal} \DIFchg{values} \DIFchg{were} \DIFchg{analyzed} \DIFchg{after} \DIFchg{adjustment} \DIFchg{for} \DIFchg{age,} \DIFchg{sex,} \DIFchg{education,} \DIFchg{and} \DIFchg{\(\log(1+W_{\mathrm{total}})\),} \DIFchg{where} \DIFchg{\(W_{\mathrm{total}}=\sum_{i<j}A_{ij}\)} \DIFchgend and  \DIFchgbegin \DIFchg{\(A\)} \DIFchg{was} \DIFchg{the} \DIFchg{final} \DIFchg{inverse-node-volume-scaled} \DIFchg{connectivity} \DIFchg{matrix} \DIFchg{before} \DIFchg{spectral} \DIFchg{stabilization.} \DIFchg{A} \DIFchg{further} \DIFchg{model} \DIFchg{added} \DIFchg{connectome} \DIFchg{density.} \DIFchg{Unranked} \DIFchg{omnibus} \DIFchg{and} \DIFchg{density-adjusted} \DIFchg{omnibus} \DIFchg{tests} \DIFchg{formed} \DIFchg{separate} \DIFchg{two-outcome} \DIFchg{BH-FDR} \DIFchg{families,} \DIFchg{and} \DIFchg{the} \DIFchg{12} \DIFchg{unranked} \DIFchg{pairwise} \DIFchg{contrasts} \DIFchg{formed} \DIFchg{another} \DIFchg{family.} \DIFchg{Direct} \DIFchg{average--modal} \DIFchg{associations} \DIFchg{used} \DIFchg{partial} \DIFchg{Spearman} \DIFchg{correlations:} \DIFchg{rank-based} \DIFchg{measures} \DIFchg{were} \DIFchg{adjusted} \DIFchg{for} \DIFchg{age,} \DIFchg{sex,} \DIFchg{and} \DIFchg{education,} \DIFchg{whereas} \DIFchg{unranked} \DIFchg{measures} \DIFchg{were} \DIFchg{additionally} \DIFchg{adjusted} \DIFchg{for} \DIFchg{matrix} \DIFchg{scale.}
+
+
+\subsection{\DIFchg{Cohort} \DIFchg{Construction} \DIFchg{and} \DIFchg{Diagnostic} \DIFchg{Sensitivity} \DIFchg{Analysis}}
+\DIFchg{The} \DIFchg{cohort} \DIFchg{was} \DIFchg{reconstructed} \DIFchg{from} \DIFchg{the} \DIFchg{ADNI} \DIFchg{imaging-metadata} \DIFchg{export} \DIFchg{used} \DIFchg{for} \DIFchg{the} \DIFchg{analysis,} \DIFchg{the} \DIFchg{final} \DIFchg{subject} \DIFchg{manifest,} \DIFchg{and} \DIFchg{the} \DIFchg{executable} \DIFchg{audit} \DIFchg{code.} \DIFchg{A} \DIFchg{session} \DIFchg{was} \DIFchg{a} \DIFchg{unique} \DIFchg{participant-date} \DIFchg{combination.} \DIFchg{Same-date} \DIFchg{duplicate} \DIFchg{diffusion} \DIFchg{series} \DIFchg{were} \DIFchg{resolved} \DIFchg{using} \DIFchg{the} \DIFchg{lower} \DIFchg{numeric} \DIFchg{image} \DIFchg{identifier,} \DIFchg{and} \DIFchg{the} \DIFchg{earliest} \DIFchg{eligible} \DIFchg{date} \DIFchg{was} \DIFchg{retained} \DIFchg{when} \DIFchg{multiple} \DIFchg{dates} \DIFchg{remained.} \DIFchg{The} \DIFchg{previous} \DIFchg{240} \DIFchg{participants} \DIFchg{were} \DIFchg{retained;} \DIFchg{systematic} \DIFchg{application} \DIFchg{of} \DIFchg{the} \DIFchg{same} \DIFchg{eligibility} \DIFchg{criteria} \DIFchg{identified} \DIFchg{9} \DIFchg{additional} \DIFchg{SMC} \DIFchg{and} \DIFchg{32} \DIFchg{additional} \DIFchg{AD} \DIFchg{participants.} \DIFchg{The} \DIFchg{archived} \DIFchg{materials} \DIFchg{supported} \DIFchg{a} \DIFchg{reconstructed} \DIFchg{query} \DIFchg{inventory} \DIFchg{and} \DIFchg{partial} \DIFchg{cohort-selection} \DIFchg{audit.} \DIFchg{They} \DIFchg{did} \DIFchg{not} \DIFchg{preserve} \DIFchg{the} \DIFchg{historical} \DIFchg{intermediate} \DIFchg{exclusion} \DIFchg{reasons;} \DIFchg{no} \DIFchg{retrospective} \DIFchg{reason} \DIFchg{was} \DIFchg{assigned} \DIFchg{without} \DIFchg{an} \DIFchg{archived} \DIFchg{record} \DIFchg{(Supplementary} \DIFchg{Table~\ref{tab:cohort_flow_audit})}\DIFchgend .
+
+\DIFaddbegin \DIFadd{Clinical-group assignment in the primary analysis followed the source-cohort labels for all 281 participants. Diagnostic records temporally matched to the selected diffusion-MRI sessions were examined in sensitivity analyses, which did not alter the interpretation of the primary group effects.
+}
+
+\endgroup
+\DIFchgend \subsection{Cognitive Associations and Education Moderation}
+Partial Spearman associations  \DIFchgbegin \DIFchg{between} \DIFchg{the} \DIFchg{rank-based} \DIFchg{bilateral} \DIFchg{hippocampal} \DIFchg{average-} \DIFchg{and} \DIFchg{modal-controllability} \DIFchg{measures} \DIFchg{and} \DIFchgend MMSE, ADAS-Cog 11, ADAS-Cog 13,
+CDR memory, and MoCA were estimated after residualizing cognition and
+controllability for age, sex, and education. For direct comparison with
+hippocampal volume, the analysis was repeated in the same FreeSurfer-complete
+participants after additional adjustment for ICV. BH-FDR correction was
+applied within each  \DIFchgbegin \DIFchg{defined} \DIFchgend association family. Education was retained
+as a primary covariate because it differed among groups, but its potential role
+as a cognitive-reserve proxy was examined in separate
+diagnosis-by-education interaction models. The three interaction terms were
+tested jointly using 10,000 Freedman--Lane permutations.
+
+\subsection{Vascular and White-Matter-Hyperintensity Analyses}
+Modified Hachinski Ischemic Scale and UCD white-matter-hyperintensity (WMH) measurements were matched to the selected diffusion MRI session within 365 days. WMH burden was calculated as \(100\times\mathrm{TOTAL\_WMH}/\mathrm{CEREBRUM\_TCV}\) and transformed using \(\log(1+x)\). Group differences were assessed using Kruskal--Wallis tests. Partial Spearman associations with hippocampal controllability, topology, WMH burden, and cognition controlled for clinical group, age, sex, and education; BH-FDR correction was applied separately within each vascular predictor and outcome family.
+
+\subsection{MCI Subtype Audit}
+The ADNI \texttt{DXSUM} record nearest to the selected diffusion MRI session was used to audit MCI subtype. The primary window was 180 days, with 365-day and any-record audits as sensitivity checks. Memory-feature MCI was defined from \texttt{DXMDES}; a stricter aMCI definition additionally required \texttt{DXMPTR5}=Yes, indicating objective memory impairment for age and education. The primary clinical-group models were repeated after restricting the MCI group to these definitions. These classifications were used only for sensitivity analysis and do not establish subsequent conversion to AD dementia.
+
+\subsection{Amyloid PET Sensitivity Analysis}
+The selected diffusion MRI session was matched to the nearest visually quality-control-passed ADNI UC Berkeley 6-mm amyloid PET record within 365 days. Binary amyloid status and continuous Centiloid burden were analyzed in separate complete-case models because their availability differed; valid negative Centiloid values were retained. Models included diagnosis, age, sex, education, and either amyloid variable. Diagnosis effects adjusted for amyloid and amyloid effects adjusted for diagnosis were evaluated using 10,000 Freedman--Lane permutations. The analysis was repeated with a 730-day window. Quality-control-passed flortaucipir PET coverage was audited, but the four-group tau analysis was not interpreted because only one SMC participant had an eligible scan within 365 days.
+
+\subsection{Hippocampal Long-Axis Analysis}
+The Tian S3 atlas contains medial-head, lateral-head, body, and tail parcels in each hemisphere. Homologous parcels were averaged to obtain four bilateral long-axis measures from within-subject ranked controllability values. The primary clinical-group model included age, sex, and education as
+covariates and used 10,000 Freedman--Lane permutations. BH-FDR correction
+was applied across the four subdivisions separately for average and
+modal controllability. These macroscopic connectivity-based parcels are not equivalent to cytoarchitectonic hippocampal subfields.
+
+\subsection{Shared and Incremental Information}
+\begingroup
+\color{blue}
+\def\DIFchg#1{#1}
+ \DIFchgbegin \DIFchg{The} \DIFchg{source} \DIFchg{was} \DIFchg{the} \DIFchg{ADNI} \DIFchg{UCSF} \DIFchg{Cross-Sectional} \DIFchg{FreeSurfer} \DIFchg{7.x} \DIFchg{export} \DIFchg{dated} \DIFchg{11} \DIFchg{July} \DIFchg{2026.} \DIFchg{ICV,} \DIFchg{left} \DIFchg{hippocampal} \DIFchg{volume,} \DIFchg{and} \DIFchg{right} \DIFchg{hippocampal} \DIFchg{volume} \DIFchg{were} \DIFchg{\texttt{ST10CV},} \DIFchg{\texttt{ST29SV},} \DIFchg{and} \DIFchg{\texttt{ST88SV}.} \DIFchg{Eligible} \DIFchg{records} \DIFchg{were} \DIFchg{3.0~T,} \DIFchg{had} \DIFchg{\texttt{EXAMDATE}} \DIFchg{exactly} \DIFchg{equal} \DIFchg{to} \DIFchg{the} \DIFchg{selected} \DIFchg{diffusion-MRI} \DIFchg{date,} \DIFchg{and} \DIFchg{contained} \DIFchg{all} \DIFchg{three} \DIFchg{measurements;} \DIFchg{same-day} \DIFchg{duplicates} \DIFchg{were} \DIFchg{resolved} \DIFchg{using} \DIFchg{the} \DIFchg{lower} \DIFchg{numeric} \DIFchg{\texttt{IMAGEUID}.} \DIFchg{All} \DIFchg{270} \DIFchg{included} \DIFchg{records} \DIFchg{used} \DIFchg{FreeSurfer} \DIFchg{7.2.0.} \DIFchg{\texttt{STATUS}} \DIFchg{was} \DIFchg{\texttt{partial},} \DIFchg{and} \DIFchg{\texttt{OVERALLQC}} \DIFchg{and} \DIFchg{\texttt{HIPPOQC}} \DIFchg{were} \DIFchg{not} \DIFchg{populated;} \DIFchg{volume-containing} \DIFchg{analyses} \DIFchg{were} \DIFchg{therefore} \DIFchg{exploratory.}
+\endgroup
+
+
+\DIFchg{Shared-information} \DIFchg{models} \DIFchg{predicted} \DIFchg{unranked} \DIFchg{average} \DIFchg{and} \DIFchg{modal} \DIFchg{controllability} \DIFchg{from} \DIFchgend age, sex, education, ICV, left and right hippocampal  \DIFchgbegin \DIFchg{volumes} \DIFchg{entered} \DIFchg{as} \DIFchg{separate} \DIFchg{predictors,} \DIFchgend strength, and  \DIFchgbegin \DIFchg{betweenness.} \DIFchg{Incremental} \DIFchg{cognitive} \DIFchg{models} \DIFchg{used} \DIFchg{the} \DIFchg{same} \DIFchg{base} \DIFchg{predictors} \DIFchg{and} \DIFchg{jointly} \DIFchg{added} \DIFchg{rank-based} \DIFchgend average and modal controllability \DIFchgbegin \DIFchg{.} \DIFchg{Reduced} \DIFchg{and} \DIFchg{full} \DIFchg{models} \DIFchg{used} \DIFchg{identical} \DIFchg{complete} \DIFchg{cases.} \DIFchg{The} \DIFchg{five} \DIFchg{two-degree-of-freedom} \DIFchg{partial} \DIFchg{\(F\)-tests} \DIFchg{formed} \DIFchg{one} \DIFchgend BH-FDR \DIFchgbegin \DIFchg{family.} \DIFchg{Percentile} \DIFchg{95\%} \DIFchg{confidence} \DIFchg{intervals} \DIFchg{for} \DIFchg{changes} \DIFchg{in} \DIFchg{\(R^2\)} \DIFchg{used} \DIFchg{5,000} \DIFchg{group-stratified} \DIFchg{bootstrap} \DIFchg{resamples,} \DIFchg{with} \DIFchg{reduced} \DIFchg{and} \DIFchg{full} \DIFchg{models} \DIFchg{refitted} \DIFchg{in} \DIFchg{every} \DIFchg{resample.} \DIFchg{Because} \DIFchg{\(\Delta R^2\)} \DIFchg{is} \DIFchg{constrained} \DIFchg{to} \DIFchg{be} \DIFchg{nonnegative} \DIFchg{in} \DIFchg{nested} \DIFchg{ordinary} \DIFchg{least-squares} \DIFchg{models,} \DIFchg{these} \DIFchg{intervals} \DIFchg{were} \DIFchg{interpreted} \DIFchg{descriptively;} \DIFchg{inferential} \DIFchg{conclusions} \DIFchg{were} \DIFchg{based} \DIFchg{on} \DIFchg{the} \DIFchg{partial} \DIFchg{\(F\)-tests,} \DIFchg{with} \DIFchg{BH-FDR} \DIFchgend correction  applied across the five  \DIFchgbegin \DIFchg{outcomes}\DIFchgend . Clinical-group membership was analyzed  using multinomial logistic regression \DIFchgbegin \DIFchg{,} \DIFchg{with} \DIFchg{a} \DIFchg{5,000-resample} \DIFchg{percentile} \DIFchg{interval} \DIFchg{for} \DIFchg{the} \DIFchgend change in McFadden \(R^2\).
+
+\begingroup
+\color{blue}
+\def\DIFchg#1{#1}
+\def\DIFadd#1{#1}
+\let\DIFchgbegin\relax
+\let\DIFchgend\relax
+\let\DIFaddbegin\relax
+\let\DIFaddend\relax
+\DIFchgbegin \subsection{\DIFchg{Multiplicity} \DIFchg{Families}}
+\DIFchg{Multiplicity} \DIFchg{was} \DIFchg{controlled} \DIFchg{within} \DIFchg{defined} \DIFchg{analysis} \DIFchg{families} \DIFchg{rather} \DIFchg{than} \DIFchg{across} \DIFchg{every} \DIFchg{analysis} \DIFchg{in} \DIFchg{the} \DIFchg{study.} \DIFchg{The} \DIFchg{family} \DIFchg{definitions,} \DIFchg{number} \DIFchg{of} \DIFchg{tests,} \DIFchg{and} \DIFchg{correction} \DIFchg{procedures} \DIFchg{are} \DIFchg{summarized} \DIFchg{in} \DIFchg{Supplementary} \DIFchg{Table~\ref{tab:multiplicity_families}.} \DIFchg{Unless} \DIFchg{otherwise} \DIFchg{specified,} \DIFchg{adjusted} \DIFchg{values} \DIFchg{use} \DIFchg{BH-FDR;} \DIFchg{the} \DIFchg{exploratory} \DIFchg{classification} \DIFchg{families} \DIFchg{use} \DIFchg{Holm} \DIFchg{familywise-error} \DIFchg{correction.}
+
+
+\endgroup
+\DIFaddend \subsection{Global Gray-Matter Sensitivity Analysis}
+Selected diffusion MRI sessions were matched to same-day ADNI UCSF Cross-Sectional FreeSurfer 7.x records. Non-hippocampal gray matter was calculated by subtracting bilateral hippocampal volume from total gray matter. Partial Spearman associations were estimated after residualizing for ICV, age, sex, and education, then repeated with clinical group included. Duplicate same-day records were resolved using the lower image identifier. Because the FreeSurfer records lacked final visual-QC ratings, these analyses were considered exploratory.
+
+\DIFaddbegin \subsection{\DIFadd{Diffusion-Protocol and Registration QC Audit}}
+\begin{sloppypar}
+\DIFadd{The archived processing environment was MRtrix3 3.0.6 and FSL 6.0.7.18, including FLIRT. Five-tissue-type images were generated with \texttt{5ttgen fsl}. Response functions were estimated with \texttt{dwi2response dhollander}, and the same \texttt{dwi2fod msmt\_csd} command, with white-matter, gray-matter, and CSF outputs, was applied to all datasets. This included 266 datasets with one nonzero shell and 15 with three nonzero shells; the use of the same multi-tissue command in the single-nonzero-shell datasets is therefore retained as a processing limitation. The final DWI inputs contained nine total-volume categories (22, 31, 36, 42, 46, 54, 55, 68, and 127), b0-count categories of 1, 4, 5, 6, 7, 8, and 13, and nonzero diffusion-weighted volume-count categories of 16, 30, 32, 36, 41, 48, 60, and 114. Observed shell sets were $b=0/1000$, $b=0/1300$, and $b=0/500/1000/2000$~s/mm$^{2}$. Fifteen 127-volume inputs were PA acquisitions, each containing 13 b0 and 114 nonzero diffusion-weighted volumes. Protocol-specific counts are given in Supplementary Table~\ref{tab:protocol_qc_summary}.
+}\end{sloppypar}
+
+\DIFadd{For retrospective registration QC, the mean b0 image was registered to the first T1-derived 5TT volume using six-degree-of-freedom FLIRT with mutual-information cost and trilinear interpolation. The transform was imported with \texttt{transformconvert}; its inverse was applied to the T1-derived brain mask in the mean-b0 grid with linear interpolation. The combined Schaefer--Tian atlas was transferred from MNI to native T1 space using six-degree-of-freedom FLIRT with mutual-information cost and nearest-neighbour label interpolation. Direct overlay inspection confirmed that the resulting native-T1 node image and tractogram shared the same physical coordinate frame. The node image was therefore supplied directly to \texttt{tck2connectome}, without an additional voxel-grid resampling step before streamline-to-node assignment. For retrospective QC only, the native-T1 atlas was transformed into the mean-b0 grid with nearest-neighbour interpolation to calculate coverage and generate overlays.
+}
+
+\DIFadd{Let $M_{\mathrm{DWI}}$ and $M_{\mathrm{T1}}$ denote the DWI brain mask and transformed T1 brain mask, and let $H$ denote the transformed bilateral hippocampal-label mask. Brain-mask overlap was quantified as $2|M_{\mathrm{DWI}}\cap M_{\mathrm{T1}}|/(|M_{\mathrm{DWI}}|+|M_{\mathrm{T1}}|)$, and hippocampal coverage as $|H\cap M_{\mathrm{DWI}}|/|H|$. Dice below 0.70 or hippocampal coverage below 0.90 triggered targeted review. Registration montages displayed transformed T1 brain-mask contours over the mean b0 image, and hippocampal montages displayed transformed hippocampal-label contours over the same image. These measures identify gross mask-overlap or out-of-brain placement problems but do not establish anatomical localization accuracy. The audit was completed quantitatively for all 281 participants. The five coverage-trigger cases comprised one CN, two MCI, and two AD participants. Manual inspection confirmed acceptable T1--DWI registration and hippocampal-label placement in all five cases, without gross misregistration or erroneous hippocampal localization. Their exclusion was evaluated in a two-endpoint sensitivity family. Within the final 281-participant analytic cohort, there were no additional registration, tractography/connectome-availability, or QC exclusions. Candidate-level failure counts preceding formation of the final analytic cohort were not available in the archived processing records.
+}
+
+\DIFchgend \subsection{Motion and Multicenter Sensitivity Analyses}
+Mean and maximum absolute and relative RMS displacement were derived from each participant's FSL \texttt{eddy\_movement\_rms} output. Group differences were tested using Kruskal--Wallis tests, and the primary controllability models were repeated with mean absolute and relative RMS displacement as additional covariates. Multicenter sensitivity models sequentially adjusted for scanner manufacturer and ADNI phase; site; and, in the strict model, scanner model, phase, site, acquisition acceleration,  \DIFchgbegin \DIFchg{NIfTI-derived} \DIFchg{diffusion-volume-count} \DIFchg{category}\DIFchgend , slice thickness, and both motion measures. \DIFchgbegin \DIFchg{After} \DIFchg{reconciliation} \DIFchg{against} \DIFchg{the} \DIFchg{final} \DIFchg{NIfTI} \DIFchg{inputs,} \DIFchg{the} \DIFchg{strict} \DIFchg{model} \DIFchg{contained} \DIFchg{12} \DIFchg{scanner-model,} \DIFchg{three} \DIFchg{phase,} \DIFchg{43} \DIFchg{site,} \DIFchg{two} \DIFchg{acceleration,} \DIFchg{nine} \DIFchg{volume-count,} \DIFchg{and} \DIFchg{four} \DIFchg{slice-thickness} \DIFchg{levels;} \DIFchg{its} \DIFchg{nominal} \DIFchg{76-column} \DIFchg{full} \DIFchg{design} \DIFchg{had} \DIFchg{rank} \DIFchg{71} \DIFchg{and} \DIFchg{210} \DIFchg{residual} \DIFchg{degrees} \DIFchg{of} \DIFchg{freedom.} \DIFchgend All controllability models used 10,000 Freedman--Lane permutations. ComBat was not applied because diagnosis, scanner, phase, and site were not fully crossed.
+
+\begingroup
+\color{blue}
+\def\DIFchg#1{#1}
+\DIFchgbegin \DIFchg{Acquisition} \DIFchg{overlap} \DIFchg{was} \DIFchg{evaluated} \DIFchg{in} \DIFchg{three} \DIFchg{complementary} \DIFchg{analyses.} \DIFchg{First,} \DIFchg{generalized} \DIFchg{overlap} \DIFchg{weights} \DIFchg{were} \DIFchg{estimated} \DIFchg{from} \DIFchg{scanner} \DIFchg{model,} \DIFchg{phase,} \DIFchg{site,} \DIFchg{acceleration,} \DIFchg{NIfTI-derived} \DIFchg{volume-count} \DIFchg{category,} \DIFchg{slice} \DIFchg{thickness,} \DIFchg{and} \DIFchg{mean} \DIFchg{absolute} \DIFchg{and} \DIFchg{relative} \DIFchg{RMS} \DIFchg{displacement.} \DIFchg{Balance} \DIFchg{was} \DIFchg{assessed} \DIFchg{using} \DIFchg{the} \DIFchg{maximum} \DIFchg{absolute} \DIFchg{pairwise} \DIFchg{standardized} \DIFchg{mean} \DIFchg{difference} \DIFchg{and} \DIFchg{group-specific} \DIFchg{effective} \DIFchg{sample} \DIFchg{sizes.} \DIFchg{Second,} \DIFchg{a} \DIFchg{connected} \DIFchg{exact-cell} \DIFchg{common-support} \DIFchg{analysis} \DIFchg{retained} \DIFchg{exact} \DIFchg{acquisition} \DIFchg{cells} \DIFchg{containing} \DIFchg{at} \DIFchg{least} \DIFchg{two} \DIFchg{clinical} \DIFchg{groups,} \DIFchg{with} \DIFchg{the} \DIFchg{additional} \DIFchg{requirement} \DIFchg{that} \DIFchg{every} \DIFchg{pair} \DIFchg{of} \DIFchg{clinical} \DIFchg{groups} \DIFchg{shared} \DIFchg{at} \DIFchg{least} \DIFchg{one} \DIFchg{cell.} \DIFchg{The} \DIFchg{model} \DIFchg{adjusted} \DIFchg{for} \DIFchg{age,} \DIFchg{sex,} \DIFchg{education,} \DIFchg{both} \DIFchg{motion} \DIFchg{measures,} \DIFchg{and} \DIFchg{acquisition-cell} \DIFchg{indicators;} \DIFchg{Freedman--Lane} \DIFchg{residual} \DIFchg{permutations} \DIFchg{were} \DIFchg{restricted} \DIFchg{within} \DIFchg{cell.} \DIFchg{Third,} \DIFchg{we} \DIFchg{quantified} \DIFchg{the} \DIFchg{feasibility} \DIFchg{of} \DIFchg{the} \DIFchg{still} \DIFchg{stricter} \DIFchg{requirement} \DIFchg{that} \DIFchg{every} \DIFchg{retained} \DIFchg{cell} \DIFchg{contain} \DIFchg{all} \DIFchg{four} \DIFchg{clinical} \DIFchg{groups.} \DIFchg{Because} \DIFchg{overlap} \DIFchg{weighting} \DIFchg{retained} \DIFchg{material} \DIFchg{imbalance} \DIFchg{and} \DIFchg{no} \DIFchg{exact} \DIFchg{cell} \DIFchg{contained} \DIFchg{all} \DIFchg{four} \DIFchg{groups} \DIFchg{after} \DIFchg{protocol} \DIFchg{reconciliation,} \DIFchg{these} \DIFchg{diagnostics} \DIFchg{and} \DIFchg{the} \DIFchg{connected} \DIFchg{common-support} \DIFchg{result} \DIFchg{were} \DIFchg{interpreted} \DIFchg{jointly} \DIFchg{rather} \DIFchg{than} \DIFchg{as} \DIFchg{proof} \DIFchg{that} \DIFchg{acquisition} \DIFchg{confounding} \DIFchg{had} \DIFchg{been} \DIFchg{removed.}
+\endgroup
+
+
+\DIFaddend \subsection{SMC Sample-Size Sensitivity Analyses}
+Balanced subsampling was repeated 1,000 times with 27 participants per group. The partial \(F\), \(\Delta R^2\), significance indicator, and adjusted SMC direction were recorded in each repetition. Each SMC participant was also removed in turn, and the primary 10,000-permutation model was rerun. Because resamples overlapped, these analyses were interpreted as stability checks rather than independent replication.
+
+\section{Supplementary Results}
+
+\subsection{Cortical and Connectivity Visualizations}
+The descriptive cortical maps were broadly similar across groups, and none of the seven aggregated cortical networks survived BH-FDR correction. Visual variation in Supplementary Fig.~S1 therefore should not be interpreted as parcel-level statistical evidence. Supplementary Fig.~S2 shows widespread hippocampal and Tian atlas-defined non-cortical structural connectivity with cortical networks; these thresholded displays were descriptive only.
+
+\DIFaddbegin \subsection{\DIFadd{Rank and Unranked Hippocampal Results}}
+\DIFadd{Both matrix-scale-adjusted unranked omnibus effects were retained, but the average-controllability pairwise pattern was scale dependent. The SMC--CN and SMC--MCI differences survived correction only for within-subject ranks, whereas the AD--MCI difference survived correction only in the matrix-scale-adjusted unranked analysis (Supplementary Tables~\ref{tab:primary_pairwise_contrasts} and \ref{tab:raw_pairwise}).
+}
+
+\DIFchgend \subsection{MCI Subtype Results}
+Within 180 days \DIFchgbegin \DIFchg{of} \DIFchg{the} \DIFchg{selected} \DIFchg{diffusion-MRI} \DIFchg{session}\DIFchgend , 80 of \DIFchgbegin \DIFchg{the} \DIFchgend 88 MCI participants had  \DIFchgbegin \DIFchg{sufficient} \DIFchg{records} \DIFchg{for} \DIFchg{subtype} \DIFchg{classification.} \DIFchg{Of} \DIFchg{these,} \DIFchgend 76 had memory-only features, two had mixed memory and non-memory features, and two had non-memory-only features. Seventy-seven met the stricter memory-feature-plus-objective-impairment definition. Clinical-group effects remained significant after restriction to either amnestic definition (all \(p_{\mathrm{FDR}}\leq0.0012\); Supplementary Table~\ref{tab:tableS1}).
+
+\subsection{Hippocampal Long-Axis Results}
+Clinical-group effects survived correction in the bilateral medial head, lateral head, body, and tail for both controllability measures, indicating macroscopic long-axis heterogeneity without resolving histological subfields (Supplementary Table~\ref{tab:tableS2}).
+
+\subsection{Education Moderation Results}
+Diagnosis-by-education interactions were not significant for average or modal controllability (both \(p_{\mathrm{FDR}}=0.748\); Supplementary Table~\ref{tab:tableS3}).
+
+\subsection{Cognitive Association Results}
+Demographic-adjusted controllability--cognition associations were significant after BH-FDR correction (absolute \(\rho=0.134\text{--}0.256\)). In the matched ICV-adjusted comparison, hippocampal volume showed larger associations with cognition (absolute \(\rho=0.225\)--0.453) than controllability (absolute \(\rho=0.124\)--0.253; Supplementary Table~\ref{tab:tableS4}).
+
+\subsection{Vascular and WMH Results}
+Modified Hachinski scores did not differ among groups and were not associated with the  \DIFchgbegin \DIFchg{analyzed} \DIFchgend imaging or cognitive outcomes after correction. Normalized WMH burden differed among groups and, after diagnosis and demographic adjustment, was associated with lower average controllability (\(\rho=-0.142\), \(p_{\mathrm{FDR}}=0.044\)), higher modal controllability (\(\rho=0.137\), \(p_{\mathrm{FDR}}=0.044\)), and lower MoCA (\(\rho=-0.247\), \(p_{\mathrm{FDR}}=0.006\); Supplementary Table~\ref{tab:tableS5}).
+
+\subsection{Shared and Incremental Information Results}
+In  \DIFchgbegin \DIFchg{the} \DIFchg{270-participant} \DIFchg{exact-date} \DIFchg{FreeSurfer} \DIFchg{sample,} \DIFchg{the} \DIFchg{harmonized} \DIFchg{structural} \DIFchg{models} \DIFchgend explained 54.6\%  and 55.0\% of \DIFchgbegin \DIFchg{raw} \DIFchg{average-} \DIFchg{and} \DIFchgend modal-controllability variance. Adding  \DIFchgbegin \DIFchg{rank-based} \DIFchg{average} \DIFchg{and} \DIFchg{modal} \DIFchg{controllability} \DIFchg{produced} \DIFchg{an} \DIFchg{FDR-corrected} \DIFchg{increment} \DIFchg{only} \DIFchgend for CDR memory  \DIFchgbegin \DIFchg{among} \DIFchg{the} \DIFchg{five} \DIFchg{cognitive} \DIFchg{outcomes} \DIFchg{(\(\Delta R^2=0.0249\),} \DIFchg{95\%} \DIFchg{CI} \DIFchg{0.0047--0.0638,} \DIFchg{\(p_{\mathrm{FDR}}=0.0374\)).} \DIFchg{The} \DIFchg{MMSE} \DIFchg{increment} \DIFchg{was} \DIFchg{nominal} \DIFchg{before} \DIFchg{correction} \DIFchg{but} \DIFchg{did} \DIFchg{not} \DIFchg{survive} \DIFchg{BH-FDR} \DIFchg{correction} \DIFchg{(\(\Delta R^2=0.0149\),} \DIFchg{95\%} \DIFchg{CI} \DIFchg{0.0000--0.0530,} \DIFchg{\(p=0.0418\),} \DIFchg{\(p_{\mathrm{FDR}}=0.0974\)).} \DIFchg{The} \DIFchg{multinomial} \DIFchg{model} \DIFchg{retained} \DIFchg{\(\Delta R^2_{\mathrm{McFadden}}=0.0219\)} \DIFchg{(95\%} \DIFchg{CI} \DIFchg{0.0103--0.0606,} \DIFchg{\(p=0.0189\);} \DIFchgend Supplementary Table~\ref{tab:tableS6}).
+
+\subsection{Motion Sensitivity Results}
+None of the four RMS motion summaries differed significantly among groups (all \(p_{\mathrm{FDR}}\geq0.233\)), and group effects remained significant after motion adjustment (Supplementary Table~\ref{tab:tableS7}).
+
+\subsection{Multicenter Sensitivity Results}
+Clinical-group effects remained significant in the strict scanner/site/protocol/motion model \DIFchgbegin \DIFchg{after} \DIFchg{reconciliation} \DIFchg{to} \DIFchg{the} \DIFchg{final} \DIFchg{NIfTI} \DIFchg{volume} \DIFchg{counts} \DIFchgend (average,  \DIFchgbegin \DIFchg{\(p_{\mathrm{FDR}}=0.0093\)}\DIFchgend ; modal,  \DIFchgbegin \DIFchg{\(p_{\mathrm{FDR}}=0.0093\)}\DIFchgend ; Supplementary Table~\ref{tab:tableS8}). \DIFchgbegin \DIFchg{The} \DIFchg{full} \DIFchg{design} \DIFchg{had} \DIFchg{rank} \DIFchg{71} \DIFchg{and} \DIFchg{210} \DIFchg{residual} \DIFchg{degrees} \DIFchg{of} \DIFchg{freedom.} \DIFchg{Generalized} \DIFchg{overlap} \DIFchg{weighting} \DIFchg{left} \DIFchg{a} \DIFchg{maximum} \DIFchg{absolute} \DIFchg{pairwise} \DIFchg{standardized} \DIFchg{mean} \DIFchg{difference} \DIFchg{of} \DIFchg{1.042} \DIFchg{and} \DIFchg{an} \DIFchg{overall} \DIFchg{effective} \DIFchg{sample} \DIFchg{size} \DIFchg{of} \DIFchg{45.2} \DIFchg{(group-specific} \DIFchg{values,} \DIFchg{34.8} \DIFchg{CN,} \DIFchg{11.5} \DIFchg{SMC,} \DIFchg{6.7} \DIFchg{MCI,} \DIFchg{and} \DIFchg{20.9} \DIFchg{AD),} \DIFchg{indicating} \DIFchg{inadequate} \DIFchg{residual} \DIFchg{balance;} \DIFchg{weighted} \DIFchg{estimates} \DIFchg{were} \DIFchg{therefore} \DIFchg{retained} \DIFchg{only} \DIFchg{as} \DIFchg{diagnostics.} \DIFchg{The} \DIFchg{connected} \DIFchg{exact-cell} \DIFchg{common-support} \DIFchg{analysis} \DIFchg{retained} \DIFchg{218} \DIFchg{participants} \DIFchg{in} \DIFchg{46} \DIFchg{cells} \DIFchg{(CN} \DIFchg{93,} \DIFchg{SMC} \DIFchg{24,} \DIFchg{MCI} \DIFchg{66,} \DIFchg{and} \DIFchg{AD} \DIFchg{35).} \DIFchg{Group} \DIFchg{effects} \DIFchg{remained} \DIFchg{significant} \DIFchg{for} \DIFchg{average} \DIFchg{rank} \DIFchg{(\(F_{3,164}=5.663\),} \DIFchg{\(p_{\mathrm{FDR}}=0.0025\),} \DIFchg{partial} \DIFchg{\(\eta^2=0.094\))} \DIFchg{and} \DIFchg{modal} \DIFchg{rank} \DIFchg{(\(F_{3,164}=5.112\),} \DIFchg{\(p_{\mathrm{FDR}}=0.0025\),} \DIFchg{partial} \DIFchg{\(\eta^2=0.086\)).} \DIFchg{No} \DIFchg{exact} \DIFchg{acquisition} \DIFchg{cell} \DIFchg{contained} \DIFchg{all} \DIFchg{four} \DIFchg{groups.} \DIFchg{Direct} \DIFchg{SMC--MCI} \DIFchg{overlap} \DIFchg{comprised} \DIFchg{four} \DIFchg{cells} \DIFchg{containing} \DIFchg{five} \DIFchg{SMC} \DIFchg{and} \DIFchg{six} \DIFchg{MCI} \DIFchg{participants;} \DIFchg{the} \DIFchg{analysis} \DIFchg{therefore} \DIFchg{does} \DIFchg{not} \DIFchg{establish} \DIFchg{that} \DIFchg{the} \DIFchg{SMC--MCI} \DIFchg{classifier} \DIFchg{is} \DIFchg{free} \DIFchg{of} \DIFchg{acquisition} \DIFchg{confounding} \DIFchg{(Supplementary} \DIFchg{Table~\ref{tab:acquisition_overlap}).} \DIFchg{The} \DIFchg{temporally} \DIFchg{matched} \DIFchg{diagnostic-record} \DIFchg{sensitivity} \DIFchg{analysis} \DIFchg{did} \DIFchg{not} \DIFchg{alter} \DIFchg{the} \DIFchg{interpretation} \DIFchg{of} \DIFchg{either} \DIFchg{primary} \DIFchg{endpoint.}
+\DIFchgend 
+
+\begingroup
+\color{blue}
+\def\DIFchg#1{#1}
+\def\DIFadd#1{#1}
+\let\DIFchgbegin\relax
+\let\DIFchgend\relax
+\let\DIFaddbegin\relax
+\let\DIFaddend\relax
+\DIFchgbegin \subsection{\DIFchg{Registration} \DIFchg{and} \DIFchg{Label-Coverage} \DIFchg{QC} \DIFchg{Results}}
+\DIFchg{The} \DIFchg{retrospective} \DIFchg{audit} \DIFchg{was} \DIFchg{completed} \DIFchg{for} \DIFchg{all} \DIFchg{281} \DIFchg{participants.} \DIFchg{Five} \DIFchg{cases} \DIFchg{crossed} \DIFchg{the} \DIFchg{hippocampal-coverage} \DIFchg{review} \DIFchg{threshold} \DIFchg{(one} \DIFchg{CN,} \DIFchg{no} \DIFchg{SMC,} \DIFchg{two} \DIFchg{MCI,} \DIFchg{and} \DIFchg{two} \DIFchg{AD).} \DIFchg{Manual} \DIFchg{inspection} \DIFchg{confirmed} \DIFchg{acceptable} \DIFchg{registration} \DIFchg{and} \DIFchg{hippocampal-label} \DIFchg{placement} \DIFchg{in} \DIFchg{all} \DIFchg{five} \DIFchg{cases.} \DIFchg{Excluding} \DIFchg{these} \DIFchg{cases} \DIFchg{retained} \DIFchg{the} \DIFchg{average-rank} \DIFchg{group} \DIFchg{effect} \DIFchg{(\(F_{3,269}=5.554\),} \DIFchg{\(p_{\mathrm{FDR}}=0.0017\),} \DIFchg{partial} \DIFchg{\(\eta^2=0.058\))} \DIFchg{and} \DIFchg{modal-rank} \DIFchg{group} \DIFchg{effect} \DIFchg{(\(F_{3,269}=5.264\),} \DIFchg{\(p_{\mathrm{FDR}}=0.0017\),} \DIFchg{partial} \DIFchg{\(\eta^2=0.055\);} \DIFchg{Supplementary} \DIFchg{Table~\ref{tab:protocol_qc_summary}).}
+
+
+\endgroup
+\DIFaddend \subsection{SMC Stability Results}
+Balanced subsampling retained the group effect in 99.9\% of average- and 99.7\% of modal-controllability repetitions, and both effects remained significant in all leave-one-SMC-out analyses (Supplementary Table~\ref{tab:tableS9}).
+
+\subsection{Global Gray-Matter Results}
+In 270 FreeSurfer-matched participants, hippocampal volume covaried with total and non-hippocampal gray matter after ICV and demographic adjustment and after additional diagnosis adjustment (Supplementary Table~\ref{tab:tableS10}).
+
+\subsection{Amyloid PET Results}
+Within 365 days, binary amyloid status was available for 230 participants and Centiloids for 226. Diagnosis effects remained significant after adjustment for either measure, whereas neither amyloid measure was independently associated with controllability after diagnosis adjustment. The 730-day analysis gave the same conclusion (Supplementary Table~\ref{tab:tableS11}).
+
+\subsection{Classification Results}
+Complete low-dimensional  results are reported in Table~II \DIFchgbegin \DIFchg{.} \DIFchg{Eleven} \DIFchg{of} \DIFchg{24} \DIFchg{complete-pipeline} \DIFchg{permutation} \DIFchg{tests} \DIFchg{remained} \DIFchg{significant} \DIFchg{after} \DIFchg{Holm} \DIFchg{correction}\DIFchgend . Bilateral volume had the highest  \DIFchgbegin \DIFchg{AUC} \DIFchg{point} \DIFchg{estimates} \DIFchgend for CN versus AD ( \DIFchgbegin \DIFchg{0.820}\DIFchgend ) and MCI versus AD ( \DIFchgbegin \DIFchg{0.825}\DIFchgend ). For SMC versus MCI,  \DIFchgbegin \DIFchg{the} \DIFchg{combined} \DIFchg{feature} \DIFchg{set} \DIFchgend had the highest  \DIFchgbegin \DIFchg{estimate} \DIFchgend ( \DIFchgbegin \DIFchg{0.729),} \DIFchg{while} \DIFchg{left} \DIFchg{controllability} \DIFchg{had} \DIFchg{the} \DIFchg{highest} \DIFchg{estimate} \DIFchg{among} \DIFchg{individual} \DIFchg{feature} \DIFchg{sets} \DIFchg{(0.701).} \DIFchg{In} \DIFchg{the} \DIFchg{common} \DIFchg{112-person} \DIFchg{sample,} \DIFchg{none} \DIFchg{of} \DIFchg{the} \DIFchg{SMC-versus-MCI} \DIFchg{candidate-versus-volume} \DIFchg{differences} \DIFchg{survived} \DIFchg{Holm} \DIFchg{correction} \DIFchg{(Supplementary} \DIFchg{Table~\ref{tab:paired_volume_classification}).} \DIFchg{The} \DIFchg{classification} \DIFchg{results} \DIFchg{therefore} \DIFchg{describe} \DIFchg{task-specific} \DIFchg{point-estimate} \DIFchg{ordering} \DIFchg{without} \DIFchg{evidence} \DIFchg{that} \DIFchg{controllability} \DIFchg{is} \DIFchg{statistically} \DIFchg{superior} \DIFchg{to} \DIFchg{volume.} \DIFchg{The} \DIFchg{high-dimensional} \DIFchg{connectivity} \DIFchg{AUCs} \DIFchg{are} \DIFchg{retained} \DIFchg{as} \DIFchg{descriptive} \DIFchg{estimates} \DIFchg{only} \DIFchgend (Supplementary Table~\ref{tab:tableS12}).
+ 
+
+\section{Supplementary Tables}
+
+\begin{table}[!htbp]
+\centering
+\caption{MCI subtype audit and aMCI-restricted sensitivity analyses.}
+\label{tab:tableS1}
+ \DIFchgbeginFL \footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\DIFchgendFL \renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xcccccc@{}}
+\toprule
+\textbf{Matching window or model} &
+\textbf{ \DIFchgbeginFL \DIFchgFL{Usable} \DIFchgFL{subtype} \DIFchgendFL record} &
+\textbf{Memory only} &
+\textbf{Mixed} &
+\textbf{Non-memory only} &
+\textbf{Strict aMCI} &
+\textbf{Unclassified}\\
+\midrule
+\multicolumn{7}{l}{\textbf{A. MCI subtype audit}}\\
+Within 180 days & 80 & 76 & 2 & 2 & 77 & 8\\
+Within 365 days & 84 & 80 & 2 & 2 & 81 & 4\\
+Any recorded MCI visit & 88 & 83 & 2 & 3 & 84 & 0\\
+\bottomrule
+\end{tabularx}
+
+\vspace{3mm}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xlccccc@{}}
+\toprule
+\textbf{MCI inclusion model} &
+\textbf{Measure} &
+\textbf{\(n_{\mathrm{MCI}}\)} &
+\textbf{Total \(n\)} &
+\textbf{\(F\)} &
+\textbf{\(p_{\mathrm{perm}}\)} &
+\textbf{\(p_{\mathrm{FDR}}\)}\\
+\midrule
+\multicolumn{7}{l}{\textbf{B. Clinical-group sensitivity analyses}}\\
+All clinically defined MCI
+ & Average & 88 & 281 & 6.495 &  \DIFchgbeginFL \DIFchgFL{0.0004} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0007}\DIFchgendFL \\
+ & Modal   & 88 & 281 & 6.041 &  \DIFchgbeginFL \DIFchgFL{0.0007} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0007}\DIFchgendFL \\
+\addlinespace
+Memory-feature aMCI within 180 days
+ & Average & 78 & 271 & 6.485 & 0.0011 & 0.0012\\
+ & Modal   & 78 & 271 & 6.061 & 0.0012 & 0.0012\\
+\addlinespace
+Memory feature + objective impairment
+ & Average & 77 & 270 & 6.584 & 0.0004 & 0.0006\\
+ & Modal   & 77 & 270 & 6.181 & 0.0006 & 0.0006\\
+\bottomrule
+\end{tabularx}
+
+\vspace{1mm}
+ \DIFchgbeginFL \footnotesize{\textit{Note:} The first numeric column reports availability of the records required for subtype classification within 180 days of the selected diffusion-MRI session. Memory only denotes an amnestic-only \texttt{DXMDES} record; mixed denotes both memory and non-memory features. Strict aMCI required a memory-feature \texttt{DXMDES} record and \texttt{DXMPTR5}=Yes, indicating objective memory impairment for age and education. Panel B reports Freedman--Lane permutation \(F\)-tests with 10,000 permutations adjusted for age, sex, and education. BH-FDR correction was applied across average and modal controllability within each inclusion model. These subtype analyses do not establish subsequent conversion to AD dementia.}
+\DIFchgendFL \end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Clinical-group effects across Tian S3 hippocampal long-axis subdivisions.}
+\label{tab:tableS2}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+\textbf{Metric} &
+\textbf{Bilateral subdivision} &
+\textbf{$n$} &
+\textbf{$F(3,274)$} &
+\textbf{$p_{\mathrm{perm}}$} &
+\textbf{$p_{\mathrm{FDR}}$} \\
+\midrule
+Average & Medial head  & 281 & 6.712 & 0.0007 & 0.0024 \\
+Average & Lateral head & 281 & 5.693 & 0.0012 & 0.0024 \\
+Average & Body         & 281 & 3.825 & 0.0111 & 0.0148 \\
+Average & Tail         & 281 & 3.387 & 0.0183 & 0.0183 \\
+\midrule
+Modal  & Medial head  & 281 & 6.566 & 0.0002 & 0.0008 \\
+Modal  & Lateral head & 281 & 5.009 & 0.0025 & 0.0050 \\
+Modal  & Body         & 281 & 3.816 & 0.0099 & 0.0132 \\
+Modal  & Tail         & 281 & 2.735 & 0.0455 & 0.0455 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1mm}
+
+\footnotesize{\textit{Note:} Omnibus clinical-group effects were tested after
+adjustment for age, sex, and education using 10,000 Freedman--Lane
+permutations. BH-FDR correction was applied across the four subdivisions
+separately within average and modal controllability. Tian S3 long-axis
+parcels are macroscopic connectivity-based subdivisions and are not
+equivalent to histological hippocampal subfields.}
+
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Exploratory diagnosis-by-education interaction analyses for hippocampal controllability.}
+\label{tab:tableS3}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Outcome} & \textbf{$n$} & \textbf{$F(3,271)$} & \textbf{$p_{\mathrm{perm}}$} & \textbf{$p_{\mathrm{FDR}}$} & \textbf{$\Delta R^2$}\\
+\midrule
+Average controllability & 281 & 0.415 & 0.737 & 0.748 & 0.004 \\
+Modal controllability & 281 & 0.403 & 0.748 & 0.748 & 0.004 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1mm}
+\footnotesize{\textit{Note:} Models included age, sex, education, diagnosis, and the three diagnosis-by-education interaction terms, with CN as the reference group. The reported \(F\)-test compares models with and without the interaction block using 10,000 Freedman--Lane permutations. Education and age were standardized. BH-FDR correction was applied across the two controllability outcomes.}
+
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Partial Spearman correlations of hippocampal controllability and volume with cognitive performance.}
+\label{tab:tableS4}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+
+\textbf{A. Primary controllability--cognition associations}
+
+\vspace{1mm}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Cognitive measure} & \textbf{$n$} & \textbf{Average controllability} & \textbf{Modal controllability}\\
+ & & \textbf{$\rho$ ($p_{\mathrm{FDR}}$)} & \textbf{$\rho$ ($p_{\mathrm{FDR}}$)}\\
+\midrule
+MMSE & 279 & \(0.146\;(0.021)\) & \(-0.134\;(0.025)\) \\
+ADAS-Cog 11 & 264 & \(-0.189\;(0.005)\) & \(0.180\;(0.006)\) \\
+ADAS-Cog 13 & 264 & \(-0.194\;(0.005)\) & \(0.180\;(0.006)\) \\
+CDR memory & 280 & \(-0.256\;(<0.001)\) & \(0.243\;(<0.001)\) \\
+MoCA & 169 & \(0.183\;(0.021)\) & \(-0.176\;(0.025)\) \\
+\bottomrule
+\end{tabular}
+
+\vspace{3mm}
+\textbf{B. Matched ICV-adjusted comparison with hippocampal volume}
+
+\vspace{1mm}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Cognitive measure} & \textbf{$n$} & \textbf{Average controllability} & \textbf{Modal controllability} & \textbf{Hippocampal volume}\\
+ & & \textbf{$\rho$ ($p_{\mathrm{FDR}}$)} & \textbf{$\rho$ ($p_{\mathrm{FDR}}$)} & \textbf{$\rho$ ($p_{\mathrm{FDR}}$)}\\
+\midrule
+MMSE & 268 & \(0.139\;(0.024)\) & \(-0.124\;(0.043)\) & \(0.367\;(<0.001)\) \\
+ADAS-Cog 11 & 254 & \(-0.196\;(0.003)\) & \(0.183\;(0.005)\) & \(-0.437\;(<0.001)\) \\
+ADAS-Cog 13 & 254 & \(-0.204\;(0.002)\) & \(0.187\;(0.005)\) & \(-0.453\;(<0.001)\) \\
+CDR memory & 269 & \(-0.253\;(<0.001)\) & \(0.236\;(<0.001)\) & \(-0.393\;(<0.001)\) \\
+MoCA & 166 & \(0.195\;(0.015)\) & \(-0.188\;(0.018)\) & \(0.225\;(0.005)\) \\
+\bottomrule
+\end{tabular}
+
+\vspace{1mm}
+\footnotesize{\textit{Note:} Panel A residualized the cognitive and controllability variables
+for age, sex, and education. BH-FDR correction was applied across the 10
+controllability--cognition associations in Panel A. Panel B used the same
+participants for all three imaging measures and additionally adjusted for ICV;
+BH-FDR correction was applied across its 15 comparisons. Higher MMSE and
+MoCA scores indicate better cognition, whereas higher ADAS-Cog and CDR memory
+scores indicate greater impairment. Hippocampal volume is the sum of the left
+and right FreeSurfer 7.x volumes.}
+
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Associations of Modified Hachinski score and
+white-matter hyperintensity burden with hippocampal imaging features
+and cognition.}
+\label{tab:tableS5}
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.08}
+
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X
+                                  >{\raggedright\arraybackslash}p{3.5cm}
+                                  cccc@{}}
+\toprule
+\textbf{Analysis or predictor} & \textbf{Outcome or coverage} &
+\textbf{\(n\)} & \textbf{Statistic} & \textbf{\(p\)} &
+\textbf{\(p_{\mathrm{FDR}}\)}\\
+\midrule
+
+\multicolumn{6}{l}{\textbf{A. Data coverage}}\\
+CN      & Hachinski / WMH / both & 110 & 88 / 110 / 88  & -- & --\\
+SMC     & Hachinski / WMH / both & 27  & 21 / 27 / 21   & -- & --\\
+MCI     & Hachinski / WMH / both & 88  & 67 / 87 / 67   & -- & --\\
+AD      & Hachinski / WMH / both & 56  & 52 / 54 / 51   & -- & --\\
+Overall & Hachinski / WMH / both & 281 & 228 / 278 / 227 & -- & --\\
+\addlinespace
+
+\multicolumn{6}{l}{\textbf{B. Clinical-group differences}}\\
+Modified Hachinski score & Four-group comparison
+ & 228 & \(H=4.329\) & 0.228 & 0.228\\
+Normalized WMH burden & Four-group comparison
+ & 278 & \(H=27.490\) & \(<0.0001\) & \(<0.0001\)\\
+\addlinespace
+
+\multicolumn{6}{l}{\textbf{C. Diagnosis- and demographic-adjusted partial Spearman associations}}\\
+Modified Hachinski score & Average controllability
+ & 228 & \(\rho=0.071\) & 0.286 & 0.692\\
+Modified Hachinski score & Modal controllability
+ & 228 & \(\rho=-0.063\) & 0.346 & 0.692\\
+Modified Hachinski score & Hippocampal strength
+ & 228 & \(\rho=0.039\) & 0.560 & 0.746\\
+Modified Hachinski score & Hippocampal betweenness
+ & 228 & \(\rho=0.009\) & 0.893 & 0.893\\
+Modified Hachinski score & MMSE
+ & 227 & \(\rho=-0.084\) & 0.206 & 0.846\\
+Modified Hachinski score & ADAS-Cog 11
+ & 212 & \(\rho=0.013\) & 0.846 & 0.846\\
+Modified Hachinski score & ADAS-Cog 13
+ & 212 & \(\rho=0.029\) & 0.674 & 0.846\\
+Modified Hachinski score & CDR memory
+ & 227 & \(\rho=0.043\) & 0.516 & 0.846\\
+Modified Hachinski score & MoCA
+ & 130 & \(\rho=-0.034\) & 0.704 & 0.846\\
+Modified Hachinski score & Normalized WMH burden
+ & 227 & \(\rho=0.004\) & 0.949 & 0.949\\
+\addlinespace
+Normalized WMH burden & Average controllability
+ & 278 & \(\rho=-0.142\) & 0.018 & 0.044\\
+Normalized WMH burden & Modal controllability
+ & 278 & \(\rho=0.137\) & 0.022 & 0.044\\
+Normalized WMH burden & Hippocampal strength
+ & 278 & \(\rho=-0.110\) & 0.067 & 0.089\\
+Normalized WMH burden & Hippocampal betweenness
+ & 278 & \(\rho=-0.062\) & 0.304 & 0.304\\
+Normalized WMH burden & MMSE
+ & 276 & \(\rho=-0.122\) & 0.043 & 0.108\\
+Normalized WMH burden & ADAS-Cog 11
+ & 262 & \(\rho=0.082\) & 0.186 & 0.229\\
+Normalized WMH burden & ADAS-Cog 13
+ & 262 & \(\rho=0.075\) & 0.229 & 0.229\\
+Normalized WMH burden & CDR memory
+ & 277 & \(\rho=0.104\) & 0.084 & 0.140\\
+Normalized WMH burden & MoCA
+ & 167 & \(\rho=-0.247\) & 0.0013 & 0.006\\
+\bottomrule
+\end{tabularx}
+
+\vspace{1mm}
+\footnotesize{\textit{Note:} Modified Hachinski scores and UCD
+white-matter hyperintensity (WMH) measurements were matched to the
+selected diffusion MRI session within 365 days. WMH burden was calculated
+as \(100\times\mathrm{TOTAL\_WMH}/\mathrm{CEREBRUM\_TCV}\) and transformed
+using \(\log(1+x)\). Partial Spearman associations controlled for clinical
+group, age, sex, and education. BH-FDR correction was applied separately
+within each vascular predictor and outcome family. }
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{ \DIFchgbeginFL \DIFchgFL{Harmonized} \DIFchgFL{shared} \DIFchgendFL and incremental information  \DIFchgbeginFL \DIFchgFL{analyses} \DIFchgFL{using} \DIFchgFL{exact-date} \DIFchgFL{FreeSurfer} \DIFchgFL{7.2.0} \DIFchgendFL hippocampal  volume  and  \DIFchgbeginFL \DIFchgFL{intracranial} \DIFchgFL{volume}\DIFchgendFL .}
+\label{tab:tableS6}
+ \DIFchgbeginFL \scriptsize
+\DIFchgendFL 
+
+\textbf{A. Variance in \DIFchgbeginFL \DIFchgFL{unranked} \DIFchgendFL controllability explained by volume and topology}
+
+\vspace{1mm}
+ \DIFchgbeginFL \begin{tabular}{@{}lccc@{}}
+\DIFchgendFL \toprule
+\textbf{ \DIFchgbeginFL \DIFchgFL{Outcome}\DIFchgendFL } & \textbf{$n$} & \textbf{Model $R^2$ \DIFchgbeginFL \DIFchgFL{(95\%} \DIFchgFL{CI)}\DIFchgendFL } \DIFchgbeginFL & \DIFchgFL{\textbf{Adjusted $R^2$}}\DIFchgendFL \\
+\midrule
+ \DIFchgbeginFL \DIFchgFL{Raw} \DIFchgFL{average} \DIFchgendFL controllability &  \DIFchgbeginFL \DIFchgFL{270} \DIFchgendFL & 0.546 \DIFchgbeginFL \DIFchgFL{(0.449--0.688)} & \DIFchgFL{0.533} \DIFchgendFL \\
+ \DIFchgbeginFL \DIFchgFL{Raw} \DIFchgFL{modal} \DIFchgendFL controllability   &  \DIFchgbeginFL \DIFchgFL{270} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.550} \DIFchgFL{(0.481--0.655)} & \DIFchgFL{0.536} \DIFchgendFL \\
+\bottomrule
+\end{tabular}
+
+\vspace{3mm}
+\textbf{B. Increment after \DIFchgbeginFL \DIFchgFL{jointly} \DIFchgendFL adding  \DIFchgbeginFL \DIFchgFL{average-} \DIFchgendFL and  \DIFchgbeginFL \DIFchgFL{modal-controllability} \DIFchgFL{ranks}\DIFchgendFL }
+
+\vspace{1mm}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+ \DIFchgbeginFL \begin{tabular}{@{}lcccccccc@{}}
+\DIFchgendFL \toprule
+\textbf{Outcome} &
+\textbf{$n$} &
+\textbf{Base $R^2$} &
+\textbf{Full $R^2$} &
+\textbf{$\Delta R^2$ \DIFchgbeginFL \DIFchgFL{(95\%} \DIFchgFL{CI)}\DIFchgendFL } &
+\textbf{Partial $F$} &
+\DIFchgbeginFL \DIFchgFL{\textbf{df}} &
+\DIFchgendFL \textbf{$p$} &
+\textbf{$p_{\mathrm{FDR}}$}\\
+\midrule
+MMSE        & 268 &  \DIFchgbeginFL \DIFchgFL{0.388} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.403} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0149} \DIFchgFL{(0.0000--0.0530)} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{3.213} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{2,257} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0418} & \DIFchgFL{0.0974} \DIFchgendFL \\
+ADAS-Cog 11 & 254 &  \DIFchgbeginFL \DIFchgFL{0.421} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.431} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0097} \DIFchgFL{(0.0000--0.0364)} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{2.079} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{2,243} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.1273} & \DIFchgFL{0.1273} \DIFchgendFL \\
+ADAS-Cog 13 & 254 &  0.444 &  \DIFchgbeginFL \DIFchgFL{0.454} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0101} \DIFchgFL{(0.0000--0.0359)} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{2.257} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{2,243} & \DIFchgFL{0.1068} & \DIFchgFL{0.1273} \DIFchgendFL \\
+CDR memory  & 269 &  \DIFchgbeginFL \DIFchgFL{0.332} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.357} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0249} \DIFchgFL{(0.0047--0.0638)} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{4.991} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{2,258} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0075} & \DIFchgFL{0.0374} \DIFchgendFL \\
+MoCA        & 166 &  \DIFchgbeginFL \DIFchgFL{0.322} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.347} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0244} \DIFchgFL{(0.0000--0.0758)} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{2.893} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{2,155} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0584} & \DIFchgFL{0.0974} \DIFchgendFL \\
+\bottomrule
+\end{tabular}
+
+\vspace{3mm}
+\textbf{C. Increment for multinomial clinical-group membership}
+
+\vspace{1mm}
+ \DIFchgbeginFL \begin{tabular}{@{}lccccccc@{}}
+\DIFchgendFL \toprule
+\textbf{Outcome} & \textbf{ \DIFchgbeginFL \DIFchgFL{$n$}\DIFchgendFL } & \textbf{ \DIFchgbeginFL \DIFchgFL{Base} \DIFchgFL{McFadden} \DIFchgFL{$R^2$}\DIFchgendFL } & \textbf{ \DIFchgbeginFL \DIFchgFL{Full} \DIFchgFL{McFadden} \DIFchgFL{$R^2$}\DIFchgendFL } &
+\textbf{ \DIFchgbeginFL \DIFchgFL{$\Delta R^{2}_{\mathrm{McFadden}}$} \DIFchgFL{(95\%} \DIFchgFL{CI)}\DIFchgendFL } & \textbf{ \DIFchgbeginFL \DIFchgFL{$\chi^2$}\DIFchgendFL } \DIFchgbeginFL & \DIFchgFL{\textbf{df}} & \DIFchgFL{\textbf{$p$}}\DIFchgendFL \\
+\midrule
+Clinical-group membership & 270 & \DIFchgbeginFL \DIFchgFL{0.1885} & \DIFchgFL{0.2105} & \DIFchgFL{0.0219} \DIFchgFL{(0.0103--0.0606)} & \DIFchgendFL 15.180 & 6 & 0.0189 \DIFchgbeginFL \\
+\bottomrule
+\end{tabular}
+
+\vspace{3mm}
+\begingroup
+\color{blue}
+\def\DIFchgFL#1{#1}
+\DIFchgFL{\textbf{D. Availability of exact-date FreeSurfer variables}}\par\vspace{1mm}
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+\DIFchgFL{\textbf{Group}} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{\textbf{Cohort}} & \DIFchgFL{\textbf{FS complete}} & \DIFchgFL{\textbf{FS missing}} & \DIFchgFL{\textbf{MMSE}} & \DIFchgFL{\textbf{ADAS-11}} & \DIFchgFL{\textbf{ADAS-13}} & \DIFchgFL{\textbf{CDR memory}} & \DIFchgFL{\textbf{MoCA}} \DIFchgendFL \\
+\DIFchgbeginFL \midrule
+\DIFchgFL{CN} & \DIFchgFL{110} & \DIFchgFL{105} & \DIFchgFL{5} & \DIFchgFL{104} & \DIFchgFL{104} & \DIFchgFL{104} & \DIFchgFL{105} & \DIFchgFL{77} \\
+\DIFchgFL{SMC} & \DIFchgFL{27} & \DIFchgFL{27} & \DIFchgFL{0} & \DIFchgFL{27} & \DIFchgFL{27} & \DIFchgFL{27} & \DIFchgFL{27} & \DIFchgFL{3} \\
+\DIFchgFL{MCI} & \DIFchgFL{88} & \DIFchgFL{85} & \DIFchgFL{3} & \DIFchgFL{84} & \DIFchgFL{73} & \DIFchgFL{73} & \DIFchgFL{84} & \DIFchgFL{67} \\
+\DIFchgFL{AD} & \DIFchgFL{56} & \DIFchgFL{53} & \DIFchgFL{3} & \DIFchgFL{53} & \DIFchgFL{50} & \DIFchgFL{50} & \DIFchgFL{53} & \DIFchgFL{19} \\
+\DIFchgFL{Total} & \DIFchgFL{281} & \DIFchgFL{270} & \DIFchgFL{11} & \DIFchgFL{268} & \DIFchgFL{254} & \DIFchgFL{254} & \DIFchgFL{269} & \DIFchgFL{166} \\
+\DIFchgendFL \bottomrule
+\end{tabular}
+
+\vspace{1mm}
+ \DIFchgbeginFL \footnotesize{\textit{Note:} ICV, left hippocampal volume, and right hippocampal volume were \texttt{ST10CV}, \texttt{ST29SV}, and \texttt{ST88SV} from \texttt{UCSFFSX7\_11Jul2026.csv}. Eligible 3.0~T records exactly matched the diffusion-MRI date; lower numeric \texttt{IMAGEUID} resolved duplicates. All included records used FreeSurfer 7.2.0. \texttt{STATUS} was \texttt{partial}; \texttt{OVERALLQC} and \texttt{HIPPOQC} were not populated. Panel A base models included age, sex, education, ICV, left and right hippocampal volumes as separate predictors, strength, and betweenness. Panel B jointly added rank-based average and modal controllability and used 5,000 group-stratified percentile bootstrap resamples; the intervals are descriptive, whereas inference used the BH-FDR-corrected partial \(F\)-tests across five outcomes. Panel C used a multinomial likelihood-ratio test and a 5,000-resample group-stratified percentile-bootstrap interval.}
+\endgroup
+\DIFchgendFL 
+
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Eddy-derived motion and motion-adjusted sensitivity analyses of hippocampal controllability.}
+\label{tab:tableS7}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X
+                                  >{\raggedright\arraybackslash}p{3.0cm}
+                                  cccc@{}}
+\toprule
+\textbf{Adjustment model or test} &
+\textbf{Measure} &
+\textbf{\(n\)} &
+\textbf{Statistic} &
+\textbf{\(p\) value} &
+\textbf{\(p_{\mathrm{FDR}}\)}\\
+\midrule
+\multicolumn{6}{l}{\textbf{A. Clinical-group differences in eddy-derived motion}}\\
+Kruskal--Wallis group test & Mean absolute RMS    & 281 & \(H=4.347\) & 0.226 & 0.285\\
+Kruskal--Wallis group test & Mean relative RMS    & 281 & \(H=6.448\) & 0.092 & 0.233\\
+Kruskal--Wallis group test & Maximum absolute RMS & 281 & \(H=3.787\) & 0.285 & 0.285\\
+Kruskal--Wallis group test & Maximum relative RMS & 281 & \(H=5.903\) & 0.116 & 0.233\\
+\addlinespace
+\multicolumn{6}{l}{\textbf{B. Sensitivity analyses after motion adjustment}}\\
+Demographic covariates
+  & Average controllability & 281 & \(F=6.495\) & 0.0004 &  \DIFchgbeginFL \DIFchgFL{0.0007}\DIFchgendFL \\
+  & Modal controllability   & 281 & \(F=6.041\) &  \DIFchgbeginFL \DIFchgFL{0.0007} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0007}\DIFchgendFL \\
+\addlinespace
+Demographic covariates + motion
+  & Average controllability & 281 & \(F=6.237\) & 0.0006 & 0.0012\\
+  & Modal controllability   & 281 & \(F=5.786\) & 0.0014 & 0.0014\\
+\bottomrule
+\end{tabularx}
+
+\vspace{1mm}
+\footnotesize{\textit{Note:} RMS displacement measures were obtained from FSL \texttt{eddy} outputs. Panel A reports Kruskal--Wallis tests, with BH-FDR correction across the four motion summaries. Panel B reports Freedman--Lane permutation \(F\)-tests with 10,000 permutations. All Panel B models included age, sex, and education; the motion-adjusted model additionally included mean absolute and mean relative RMS displacement. BH-FDR correction was applied across average and modal controllability within each Panel B model. RMS, root mean square.}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Multicenter and acquisition-protocol sensitivity analyses of hippocampal controllability.}
+\label{tab:tableS8}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X
+                                  >{\raggedright\arraybackslash}p{3.0cm}
+                                  cccc@{}}
+\toprule
+\textbf{Adjustment model} &
+\textbf{Measure} &
+\textbf{\(n\)} &
+\textbf{\(F\)} &
+\textbf{\(p_{\mathrm{perm}}\)} &
+\textbf{\(p_{\mathrm{FDR}}\)}\\
+\midrule
+Scanner manufacturer + ADNI phase
+  & Average controllability & 281 & 5.362 & 0.0022 & 0.0026\\
+  & Modal controllability   & 281 & 4.852 & 0.0026 & 0.0026\\
+\addlinespace
+Scanner manufacturer + phase + site
+  & Average controllability & 281 & 3.792 & 0.0119 & 0.0166\\
+  & Modal controllability   & 281 & 3.522 & 0.0166 & 0.0166\\
+\addlinespace
+Scanner/site/protocol/motion model
+  & Average controllability & 281 &  \DIFchgbeginFL \DIFchgFL{4.368} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0057} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0093}\DIFchgendFL \\
+  & Modal controllability   & 281 &  \DIFchgbeginFL \DIFchgFL{3.977} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0093} \DIFchgendFL &  \DIFchgbeginFL \DIFchgFL{0.0093}\DIFchgendFL \\
+\bottomrule
+\end{tabularx}
+
+\vspace{1mm}
+ \DIFchgbeginFL \footnotesize{\textit{Note:} All models included age, sex, and education and were evaluated using Freedman--Lane permutation \(F\)-tests with 10,000 permutations. After reconciliation to the final NIfTI inputs, the strict scanner/site/protocol/motion model additionally included 12 scanner-model levels, three ADNI phases, 43 sites, two acceleration levels, nine NIfTI-derived diffusion-volume-count levels, four slice-thickness levels, and mean absolute and relative RMS displacement. Its nominal 76-column full design had rank 71 and 210 residual degrees of freedom. BH-FDR correction was applied across average and modal controllability within each adjustment model. ComBat was not applied because diagnosis, ADNI phase, scanner, and site were not fully crossed.}
+\DIFchgendFL \end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{SMC sample-size and unequal-group sensitivity analyses of hippocampal controllability.}
+\label{tab:tableS9}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.4cm}
+                                  >{\raggedright\arraybackslash}p{1.7cm}
+                                  >{\raggedright\arraybackslash}X
+                                  >{\raggedright\arraybackslash}X
+                                  >{\centering\arraybackslash}p{1.7cm}
+                                  >{\centering\arraybackslash}p{1.7cm}@{}}
+\toprule
+\textbf{Analysis} &
+\textbf{Measure} &
+\textbf{Partial \(F\)} &
+\textbf{\(\Delta R^2\)} &
+\textbf{Significant runs} &
+\textbf{SMC pattern retained}\\
+\midrule
+Balanced subsampling
+  & Average & 5.663 (3.439--9.859) & 0.131 (0.084--0.212) & 99.9\% & 99.9\%\\
+  & Modal   & 5.349 (3.295--9.588) & 0.127 (0.081--0.205) & 99.7\% & 99.9\%\\
+\addlinespace
+Leave-one-SMC-out
+  & Average & 5.960--6.863 & 0.058--0.066 & 100\% & 100\%\\
+  & Modal   & 5.518--6.398 & 0.054--0.062 & 100\% & 100\%\\
+\bottomrule
+\end{tabularx}
+
+\vspace{1mm}
+\footnotesize{\textit{Note:} Balanced subsampling comprised 1,000 repetitions with 27 participants per group; values are medians (2.5th--97.5th percentiles), and ``significant runs'' denotes the percentage with parametric partial \(F\)-test \(p<0.05\). Leave-one-SMC-out comprised 27 analyses with 26 SMC participants and all CN, MCI, and AD participants retained; values are ranges across iterations, all of which remained significant by Freedman--Lane tests with 10,000 permutations (average controllability, \(p=0.0002\text{--}0.0010\); modal controllability, \(p=0.0003\text{--}0.0017\)). The SMC pattern was defined as the highest adjusted mean average controllability and lowest adjusted mean modal controllability among the four groups. Overlapping resamples are stability checks rather than independent replications.}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Same-day FreeSurfer global gray-matter sensitivity analysis.}
+\label{tab:tableS10}
+\footnotesize
+
+\textbf{A. Same-day coverage}
+
+\vspace{1mm}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Group} & \textbf{Cohort \(n\)} & \textbf{Matched \(n\)} & \textbf{Coverage}\\
+\midrule
+CN & 110 & 105 & 95.5\% \\
+SMC & 27 & 27 & 100.0\% \\
+MCI & 88 & 85 & 96.6\% \\
+AD & 56 & 53 & 94.6\% \\
+Overall & 281 & 270 & 96.1\% \\
+\bottomrule
+\end{tabular}
+
+\vspace{3mm}
+\textbf{B. Partial Spearman associations}
+
+\vspace{1mm}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.0cm}>{\raggedright\arraybackslash}p{4.3cm}ccc@{}}
+\toprule
+\textbf{Hippocampal measure} & \textbf{Comparison measure} & \textbf{\(n\)} & \textbf{\(\rho\)} & \textbf{\(p_{\mathrm{FDR}}\)}\\
+\midrule
+Bilateral hippocampus & Total gray matter & 270 & 0.498 & \(7.54\times10^{-18}\) \\
+Bilateral hippocampus & Non-hippocampal gray matter & 270 & 0.480 & \(1.06\times10^{-16}\) \\
+Bilateral hippocampus & Cortical gray matter & 270 & 0.468 & \(5.01\times10^{-16}\) \\
+Bilateral hippocampus & Subcortical gray matter & 270 & 0.595 & \(1.91\times10^{-26}\) \\
+Left hippocampus & Non-hippocampal gray matter & 270 & 0.470 & \(4.48\times10^{-16}\) \\
+Right hippocampus & Non-hippocampal gray matter & 270 & 0.440 & \(3.05\times10^{-14}\) \\
+\bottomrule
+\end{tabular}
+
+\vspace{3mm}
+\textbf{C. Associations additionally adjusted for diagnostic group}
+
+\vspace{1mm}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.0cm}>{\raggedright\arraybackslash}p{4.3cm}ccc@{}}
+\toprule
+\textbf{Hippocampal measure} & \textbf{Comparison measure} & \textbf{\(n\)} & \textbf{\(\rho\)} & \textbf{\(p_{\mathrm{FDR}}\)}\\
+\midrule
+Bilateral hippocampus & Total gray matter & 270 & 0.428 & \(5.67\times10^{-13}\) \\
+Bilateral hippocampus & Non-hippocampal gray matter & 270 & 0.412 & \(3.38\times10^{-12}\) \\
+Bilateral hippocampus & Cortical gray matter & 270 & 0.395 & \(2.06\times10^{-11}\) \\
+Bilateral hippocampus & Subcortical gray matter & 270 & 0.537 & \(7.86\times10^{-21}\) \\
+Left hippocampus & Non-hippocampal gray matter & 270 & 0.404 & \(7.63\times10^{-12}\) \\
+Right hippocampus & Non-hippocampal gray matter & 270 & 0.366 & \(5.52\times10^{-10}\) \\
+\bottomrule
+\end{tabular}
+
+\vspace{1mm}
+\footnotesize{\textit{Note:} Panel B associations controlled for ICV, age, sex, and education. Panel C additionally included three diagnostic-group indicator variables. Non-hippocampal gray matter was calculated by subtracting bilateral hippocampal volume from total gray-matter volume, avoiding part--whole correlation. BH-FDR correction was applied across the six associations within each panel. These are cross-sectional volume associations, not longitudinal atrophy rates. The matched FreeSurfer records lacked final visual QC and these results are exploratory.}
+
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Amyloid PET sensitivity analyses for hippocampal controllability.}
+\label{tab:tableS11}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}cllcccc@{}}
+\toprule
+\textbf{Window} & \textbf{Amyloid variable} & \textbf{Tested effect} & \textbf{Outcome} & \textbf{$n$} & \textbf{$F$} & \textbf{$p$ ($p_{\mathrm{FDR}}$)}\\
+\midrule
+365 d & Status & Diagnosis & Average & 230 & $F_{3,222}=5.521$ & 0.0018 (0.0018) \\
+365 d & Status & Diagnosis & Modal & 230 & $F_{3,222}=5.321$ & 0.0016 (0.0018) \\
+365 d & Status & Amyloid & Average & 230 & $F_{1,222}=0.327$ & 0.5689 (0.5689) \\
+365 d & Status & Amyloid & Modal & 230 & $F_{1,222}=0.392$ & 0.5381 (0.5689) \\
+365 d & Centiloids & Diagnosis & Average & 226 & $F_{3,218}=5.483$ & 0.0009 (0.0018) \\
+365 d & Centiloids & Diagnosis & Modal & 226 & $F_{3,218}=5.160$ & 0.0021 (0.0021) \\
+365 d & Centiloids & Amyloid & Average & 226 & $F_{1,218}=0.877$ & 0.3463 (0.3675) \\
+365 d & Centiloids & Amyloid & Modal & 226 & $F_{1,218}=0.781$ & 0.3675 (0.3675) \\
+\midrule
+730 d & Status & Diagnosis & Average & 241 & $F_{3,233}=6.228$ & 0.0004 (0.0008) \\
+730 d & Status & Diagnosis & Modal & 241 & $F_{3,233}=6.100$ & 0.0008 (0.0008) \\
+730 d & Status & Amyloid & Average & 241 & $F_{1,233}=0.023$ & 0.8797 (0.8797) \\
+730 d & Status & Amyloid & Modal & 241 & $F_{1,233}=0.051$ & 0.8246 (0.8797) \\
+730 d & Centiloids & Diagnosis & Average & 237 & $F_{3,229}=6.106$ & 0.0006 (0.0008) \\
+730 d & Centiloids & Diagnosis & Modal & 237 & $F_{3,229}=5.850$ & 0.0008 (0.0008) \\
+730 d & Centiloids & Amyloid & Average & 237 & $F_{1,229}=0.394$ & 0.5188 (0.5628) \\
+730 d & Centiloids & Amyloid & Modal & 237 & $F_{1,229}=0.336$ & 0.5628 (0.5628) \\
+\bottomrule
+\end{tabular}
+
+\vspace{1mm}
+\footnotesize{\textit{Note:} The diagnosis effect was tested after adjustment for the listed amyloid variable, age, sex, and education. The amyloid effect was tested after adjustment for diagnosis, age, sex, and education. Status and Centiloids were analyzed in separate complete-case models, producing different sample sizes; valid negative Centiloid values were retained. All \(p\) values were obtained using 10,000 Freedman--Lane permutations. BH-FDR correction was applied across average and modal controllability within each tested effect.}
+
+\end{table}
+
+
+\begin{table}[!htbp]
+\centering
+\caption{Classification performance based on hippocampal structural connectivity features in four binary tasks.}
+\label{tab:tableS12}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+ \DIFchgbeginFL \begin{tabular}{@{}lcc@{}}
+\DIFchgendFL \toprule
+\textbf{Task} & \textbf{AUC (95\% CI)} &  \textbf{Interpretation}\\
+\midrule
+CN vs AD & 0.601 (0.508--0.691) &  \DIFchgbeginFL \DIFchgFL{Descriptive} \DIFchgFL{exploratory} \DIFchgFL{estimate} \DIFchgendFL \\
+SMC vs MCI & 0.693 (0.584--0.797) &  \DIFchgbeginFL \DIFchgFL{Descriptive} \DIFchgFL{exploratory} \DIFchgFL{estimate} \DIFchgendFL \\
+MCI vs AD & 0.634 (0.540--0.731) &  \DIFchgbeginFL \DIFchgFL{Descriptive} \DIFchgFL{exploratory} \DIFchgFL{estimate} \DIFchgendFL \\
+CN vs SMC & 0.680 (0.573--0.780) &  \DIFchgbeginFL \DIFchgFL{Descriptive} \DIFchgFL{exploratory} \DIFchgFL{estimate} \\
+
+\bottomrule
+\end{tabular}
+
+\vspace{1mm}
+\footnotesize{\textit{Note:} AUC confidence intervals were estimated using 2,000 bootstrap resamples of subject-level out-of-sample predictions from nested cross-validation. The previous fixed-score permutation values were removed because the full high-dimensional pipeline was not refitted under label permutation. CN, cognitively normal; SMC, subjective memory complaints; MCI, mild cognitive impairment; AD, Alzheimer's disease.}
+
+\end{table}
+
+%DIF >  Begin inlined supplementary_new_tables.tex
+\begingroup
+\color{blue}
+\def\DIFchg#1{#1}
+\def\DIFadd#1{#1}
+\def\DIFchgFL#1{#1}
+\def\DIFaddFL#1{#1}
+\def\DIFchgbegin{}
+\def\DIFchgend{}
+\def\DIFaddbegin{}
+\def\DIFaddend{}
+\def\DIFchgbeginFL{}
+\def\DIFchgendFL{}
+\def\DIFaddbeginFL{}
+\def\DIFaddendFL{}
+\begin{table}[!htbp]
+\color{blue}
+\centering
+\caption{\DIFaddFL{Primary rank endpoints and matrix-scale-adjusted unranked hippocampal controllability sensitivity analyses.}}
+\label{tab:rank_raw_sensitivity}
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\DIFaddFL{\textbf{A. Adjusted group estimates (95\% CI)}}\par\vspace{1mm}
+\begin{tabular}{llcccc}
+\toprule
+\DIFaddFL{Scale }\DIFaddendFL &  \DIFaddbeginFL \DIFaddFL{Metric }& \DIFaddFL{CN }& \DIFaddFL{SMC }& \DIFaddFL{MCI }& \DIFaddFL{AD}\DIFaddendFL \\
+\DIFaddbeginFL \midrule
+\DIFaddFL{Within-subject rank }& \DIFaddFL{Average }& \DIFaddFL{345.3 (329.5--360.3) }& \DIFaddFL{383.9 (366.1--399.6) }& \DIFaddFL{324.7 (306.7--341.5) }& \DIFaddFL{307.4 (286.7--327.7)}\\
+\DIFaddFL{Within-subject rank }& \DIFaddFL{Modal }& \DIFaddFL{107.9 (92.5--124.0) }& \DIFaddFL{66.5 (49.4--85.0) }& \DIFaddFL{128.8 (111.5--148.0) }& \DIFaddFL{142.4 (122.5--163.9)}\\
+\DIFaddFL{Unranked raw value }& \DIFaddFL{Average }& \DIFaddFL{1.173 (1.152--1.195) }& \DIFaddFL{1.218 (1.174--1.265) }& \DIFaddFL{1.169 (1.140--1.204) }& \DIFaddFL{1.116 (1.096--1.139)}\\
+\DIFaddFL{Unranked raw value }& \DIFaddFL{Modal }& \DIFaddFL{0.905 (0.894--0.914) }& \DIFaddFL{0.877 (0.858--0.895) }& \DIFaddFL{0.913 (0.901--0.924) }& \DIFaddFL{0.929 (0.918--0.940)}\\
+\bottomrule
+\end{tabular}
+\DIFaddendFL 
+
+\DIFaddbeginFL \vspace{3mm}
+\DIFaddFL{\textbf{B. Omnibus clinical-group effects}}\par\vspace{1mm}
+\begin{tabular}{llccccc}
+\toprule
+\DIFaddFL{Analysis }& \DIFaddFL{Metric }& \DIFaddFL{$F$ }& \DIFaddFL{df }& \DIFaddFL{$p_{\mathrm{perm}}$ }& \DIFaddFL{$p_{\mathrm{FDR}}$ }& \DIFaddFL{Partial $\eta^2$}\\
+\midrule
+\DIFaddFL{Primary rank }& \DIFaddFL{Average }& \DIFaddFL{6.495 }& \DIFaddFL{3,274 }& \DIFaddFL{0.0004 }& \DIFaddFL{0.0028 }& \DIFaddFL{0.066 (0.034--0.127)}\\
+\DIFaddFL{Primary rank }& \DIFaddFL{Modal }& \DIFaddFL{6.041 }& \DIFaddFL{3,274 }& \DIFaddFL{0.0007 }& \DIFaddFL{0.0049 }& \DIFaddFL{0.062 (0.032--0.121)}\\
+\DIFaddFL{Raw, matrix-scale adjusted }& \DIFaddFL{Average }& \DIFaddFL{4.426 }& \DIFaddFL{3,273 }& \DIFaddFL{0.0066 }& \DIFaddFL{0.0066 }& \DIFaddFL{0.046}\\
+\DIFaddFL{Raw, matrix-scale adjusted }& \DIFaddFL{Modal }& \DIFaddFL{6.313 }& \DIFaddFL{3,273 }& \DIFaddFL{0.0004 }& \DIFaddFL{0.0008 }& \DIFaddFL{0.065}\\
+\DIFaddFL{Raw, matrix-scale+density adjusted }& \DIFaddFL{Average }& \DIFaddFL{4.232 }& \DIFaddFL{3,272 }& \DIFaddFL{0.0062 }& \DIFaddFL{0.0062 }& \DIFaddFL{0.045}\\
+\DIFaddFL{Raw, matrix-scale+density adjusted }& \DIFaddFL{Modal }& \DIFaddFL{5.306 }& \DIFaddFL{3,272 }& \DIFaddFL{0.0016 }& \DIFaddFL{0.0032 }& \DIFaddFL{0.055}\\
+\DIFaddendFL \bottomrule
+\end{tabular}
+
+\DIFchgbeginFL \vspace{3mm}
+\DIFchgFL{\textbf{C. Direct average--modal association}}\par\DIFchgendFL \vspace{1mm}
+ \DIFchgbeginFL \begin{tabular}{lcc}
+\toprule
+\DIFchgFL{Scale} \DIFchgFL{and} \DIFchgFL{adjustment} & \DIFchgFL{$n$} & \DIFchgFL{Partial} \DIFchgFL{Spearman} \DIFchgFL{$\rho$} \DIFchgFL{(95\%} \DIFchgFL{CI)}\\
+\midrule
+\DIFchgFL{Within-subject} \DIFchgFL{ranks;} \DIFchgFL{age,} \DIFchgFL{sex,} \DIFchgFL{education} & \DIFchgFL{281} & \DIFchgFL{$-0.992$} \DIFchgFL{($-0.994$} \DIFchgFL{to} \DIFchgFL{$-0.987$)}\\
+\DIFchgFL{Unranked;} \DIFchgFL{age,} \DIFchgFL{sex,} \DIFchgFL{education,} \DIFchgFL{matrix} \DIFchgFL{scale} & \DIFchgFL{281} & \DIFchgFL{$-0.930$} \DIFchgFL{($-0.955$} \DIFchgFL{to} \DIFchgFL{$-0.896$)}\\
+\bottomrule
+\end{tabular}
+\par\vspace{1mm}
+\footnotesize{\textit{Note:} Adjusted estimates and confidence intervals used 5,000 group-stratified bootstrap resamples. Omnibus tests used 10,000 Freedman--Lane permutations. Primary rank values retain correction across seven Tian structures within endpoint; each unranked omnibus family contains average and modal outcomes. Matrix scale is $\log(1+W_{\mathrm{total}})$, where $W_{\mathrm{total}}=\sum_{i<j}A_{ij}$ for the final inverse-node-volume-scaled matrix before spectral stabilization.}
+\end{table}
+\DIFchgend 
+
+\DIFchgbegin \begin{table}[!htbp]
+\color{blue}
+\centering
+\caption{\DIFchgFL{Multiplicity-controlled} \DIFchgFL{pairwise} \DIFchgFL{contrasts} \DIFchgFL{for} \DIFchgFL{the} \DIFchgFL{primary} \DIFchgFL{hippocampal} \DIFchgFL{within-subject} \DIFchgFL{rank} \DIFchgFL{endpoints.}}
+\label{tab:primary_pairwise_contrasts}
+\scriptsize
+\begin{tabular}{lllrrr}
+\toprule
+\DIFchgFL{Endpoint} & \DIFchgFL{Contrast} & \DIFchgFL{Adjusted} \DIFchgFL{difference} \DIFchgFL{(95\%} \DIFchgFL{CI)} & \DIFchgFL{Standardized} \DIFchgFL{difference} & \DIFchgFL{$p$} & \DIFchgFL{$p_{\mathrm{FDR}}$}\\
+\midrule
+\DIFchgFL{Average} \DIFchgFL{rank} & \DIFchgFL{SMC--CN} & \DIFchgFL{38.6} \DIFchgFL{(15.5,} \DIFchgFL{60.9)} & \DIFchgFL{0.49} & \DIFchgFL{0.0225} & \DIFchgFL{0.0337}\\
+& \DIFchgFL{MCI--CN} & \DIFchgFL{$-20.6$} \DIFchgFL{($-43.7$,} \DIFchgFL{2.0)} & \DIFchgFL{$-0.26$} & \DIFchgFL{0.0733} & \DIFchgFL{0.0977}\\
+& \DIFchgFL{AD--CN} & \DIFchgFL{$-37.9$} \DIFchgFL{($-63.9$,} \DIFchgFL{$-12.4$)} & \DIFchgFL{$-0.48$} & \DIFchgFL{0.0049} & \DIFchgFL{0.0118}\\
+& \DIFchgFL{MCI--SMC} & \DIFchgFL{$-59.2$} \DIFchgFL{($-83.3$,} \DIFchgFL{$-34.3$)} & \DIFchgFL{$-0.75$} & \DIFchgFL{0.0011} & \DIFchgFL{0.0033}\\
+& \DIFchgFL{AD--SMC} & \DIFchgFL{$-76.5$} \DIFchgFL{($-102.6$,} \DIFchgFL{$-50.0$)} & \DIFchgFL{$-0.97$} & \DIFchgFL{0.0002} & \DIFchgFL{0.0018}\\
+& \DIFchgFL{AD--MCI} & \DIFchgFL{$-17.3$} \DIFchgFL{($-43.6$,} \DIFchgFL{8.8)} & \DIFchgFL{$-0.22$} & \DIFchgFL{0.2027} & \DIFchgFL{0.2211}\\
+\addlinespace
+\DIFchgFL{Modal} \DIFchgFL{rank} & \DIFchgFL{SMC--CN} & \DIFchgFL{$-41.5$} \DIFchgFL{($-65.1$,} \DIFchgFL{$-17.2$)} & \DIFchgFL{$-0.51$} & \DIFchgFL{0.0196} & \DIFchgFL{0.0336}\\
+& \DIFchgFL{MCI--CN} & \DIFchgFL{20.9} \DIFchgFL{($-2.3$,} \DIFchgFL{45.6)} & \DIFchgFL{0.26} & \DIFchgFL{0.0823} & \DIFchgFL{0.0988}\\
+& \DIFchgFL{AD--CN} & \DIFchgFL{34.5} \DIFchgFL{(8.8,} \DIFchgFL{61.3)} & \DIFchgFL{0.43} & \DIFchgFL{0.0126} & \DIFchgFL{0.0252}\\
+& \DIFchgFL{MCI--SMC} & \DIFchgFL{62.3} \DIFchgFL{(36.4,} \DIFchgFL{88.2)} & \DIFchgFL{0.77} & \DIFchgFL{0.0007} & \DIFchgFL{0.0028}\\
+& \DIFchgFL{AD--SMC} & \DIFchgFL{76.0} \DIFchgFL{(48.5,} \DIFchgFL{102.3)} & \DIFchgFL{0.94} & \DIFchgFL{0.0003} & \DIFchgFL{0.0018}\\
+& \DIFchgFL{AD--MCI} & \DIFchgFL{13.6} \DIFchgFL{($-13.5$,} \DIFchgFL{40.5)} & \DIFchgFL{0.17} & \DIFchgFL{0.3317} & \DIFchgFL{0.3317}\\
+\bottomrule
+\end{tabular}
+\par\vspace{1mm}
+\footnotesize{\textit{Note:} Differences are first-named minus second-named group. Confidence intervals used 5,000 group-stratified bootstrap resamples and are individually unadjusted. The 12 two-sided permutation tests formed one BH-FDR family.}
+\DIFchgendFL \end{table}
+
+\DIFaddbegin \begin{table}[!htbp]
+\color{blue}
+\centering
+\caption{\DIFaddFL{Multiplicity-controlled pairwise contrasts for matrix-scale-adjusted unranked hippocampal controllability.}}
+\label{tab:raw_pairwise}
+\scriptsize
+\begin{tabular}{lllrrr}
+\toprule
+\DIFaddFL{Metric }& \DIFaddFL{Contrast }& \DIFaddFL{Adjusted difference (95\% CI) }& \DIFaddFL{Standardized difference }& \DIFaddFL{$p_{\mathrm{FDR}}$}\\
+\midrule
+\DIFaddFL{Average }& \DIFaddFL{SMC--CN }& \DIFaddFL{0.0446 ($-0.0059$, 0.0966) }& \DIFaddFL{0.36 }& \DIFaddFL{0.1193}\\
+& \DIFaddFL{MCI--CN }& \DIFaddFL{$-0.0040$ ($-0.0408$, 0.0350) }& \DIFaddFL{$-0.03$ }& \DIFaddFL{0.8259}\\
+& \DIFaddFL{AD--CN }& \DIFaddFL{$-0.0569$ ($-0.0879$, $-0.0244$) }& \DIFaddFL{$-0.46$ }& \DIFaddFL{0.0187}\\
+& \DIFaddFL{MCI--SMC }& \DIFaddFL{$-0.0486$ ($-0.1032$, 0.0078) }& \DIFaddFL{$-0.39$ }& \DIFaddFL{0.1108}\\
+& \DIFaddFL{AD--SMC }& \DIFaddFL{$-0.1016$ ($-0.1532$, $-0.0529$) }& \DIFaddFL{$-0.82$ }& \DIFaddFL{0.0048}\\
+& \DIFaddFL{AD--MCI }& \DIFaddFL{$-0.0529$ ($-0.0947$, $-0.0148$) }& \DIFaddFL{$-0.43$ }& \DIFaddFL{0.0255}\\
+\addlinespace
+\DIFaddFL{Modal }& \DIFaddFL{SMC--CN }& \DIFaddFL{$-0.0272$ ($-0.0485$, $-0.0058$) }& \DIFaddFL{$-0.53$ }& \DIFaddFL{0.0255}\\
+& \DIFaddFL{MCI--CN }& \DIFaddFL{0.0083 ($-0.0073$, 0.0236) }& \DIFaddFL{0.16 }& \DIFaddFL{0.2775}\\
+& \DIFaddFL{AD--CN }& \DIFaddFL{0.0245 (0.0092, 0.0404) }& \DIFaddFL{0.48 }& \DIFaddFL{0.0135}\\
+& \DIFaddFL{MCI--SMC }& \DIFaddFL{0.0356 (0.0133, 0.0579) }& \DIFaddFL{0.70 }& \DIFaddFL{0.0092}\\
+& \DIFaddFL{AD--SMC }& \DIFaddFL{0.0517 (0.0294, 0.0742) }& \DIFaddFL{1.01 }& \DIFaddFL{0.0012}\\
+& \DIFaddFL{AD--MCI }& \DIFaddFL{0.0161 (0.0003, 0.0327) }& \DIFaddFL{0.32 }& \DIFaddFL{0.1012}\\
+\bottomrule
+\end{tabular}
+\par\vspace{1mm}
+\footnotesize{\textit{Note:} Models additionally adjusted for $\log(1+W_{\mathrm{total}})$, where $W_{\mathrm{total}}=\sum_{i<j}A_{ij}$ for the final inverse-node-volume-scaled matrix before spectral stabilization. The 12 two-sided permutation tests formed one BH-FDR family; individual bootstrap confidence intervals are unadjusted.}
+\end{table}
+
+\begin{landscape}
+\begin{longtable}{llrrrrr}
+\caption{\DIFadd{Direct paired AUC comparisons of candidate feature sets with bilateral hippocampal volume in common complete-case samples.}}\label{tab:paired_volume_classification}\\
+\toprule
+\DIFadd{Task }& \DIFadd{Candidate }& \DIFadd{$n$ }& \DIFadd{Candidate AUC }& \DIFadd{Volume AUC }& \DIFadd{$\Delta$AUC (95\% CI) }& \DIFadd{$p_{\mathrm{Holm}}$}\\
+\midrule
+\endfirsthead
+\toprule \DIFadd{Task }& \DIFadd{Candidate }& \DIFadd{$n$ }& \DIFadd{Candidate AUC }& \DIFadd{Volume AUC }& \DIFadd{$\Delta$AUC (95\% CI) }& \DIFadd{$p_{\mathrm{Holm}}$}\\ \midrule
+\endhead
+\DIFadd{CN vs AD }& \DIFadd{Global controllability }& \DIFadd{158 }& \DIFadd{0.653 }& \DIFadd{0.820 }& \DIFadd{$-0.167$ ($-0.281$, $-0.057$) }& \DIFadd{0.042}\\
+& \DIFadd{Left controllability }& \DIFadd{158 }& \DIFadd{0.673 }& \DIFadd{0.820 }& \DIFadd{$-0.147$ ($-0.256$, $-0.039$) }& \DIFadd{0.120}\\
+& \DIFadd{Right controllability }& \DIFadd{158 }& \DIFadd{0.587 }& \DIFadd{0.820 }& \DIFadd{$-0.233$ ($-0.344$, $-0.120$) }& \DIFadd{0.007}\\
+& \DIFadd{Topology }& \DIFadd{158 }& \DIFadd{0.549 }& \DIFadd{0.820 }& \DIFadd{$-0.271$ ($-0.384$, $-0.148$) }& \DIFadd{0.004}\\
+& \DIFadd{Combined }& \DIFadd{158 }& \DIFadd{0.813 }& \DIFadd{0.820 }& \DIFadd{$-0.007$ ($-0.037$, 0.025) }& \DIFadd{1.000}\\
+\addlinespace
+\DIFadd{SMC vs MCI }& \DIFadd{Global controllability }& \DIFadd{112 }& \DIFadd{0.708 }& \DIFadd{0.654 }& \DIFadd{0.054 ($-0.091$, 0.199) }& \DIFadd{1.000}\\
+& \DIFadd{Left controllability }& \DIFadd{112 }& \DIFadd{0.675 }& \DIFadd{0.654 }& \DIFadd{0.022 ($-0.122$, 0.167) }& \DIFadd{1.000}\\
+& \DIFadd{Right controllability }& \DIFadd{112 }& \DIFadd{0.708 }& \DIFadd{0.654 }& \DIFadd{0.055 ($-0.098$, 0.200) }& \DIFadd{1.000}\\
+& \DIFadd{Topology }& \DIFadd{112 }& \DIFadd{0.617 }& \DIFadd{0.654 }& \DIFadd{$-0.037$ ($-0.196$, 0.119) }& \DIFadd{1.000}\\
+& \DIFadd{Combined }& \DIFadd{112 }& \DIFadd{0.729 }& \DIFadd{0.654 }& \DIFadd{0.076 ($-0.014$, 0.169) }& \DIFadd{1.000}\\
+\addlinespace
+\DIFadd{MCI vs AD }& \DIFadd{Global controllability }& \DIFadd{138 }& \DIFadd{0.630 }& \DIFadd{0.825 }& \DIFadd{$-0.195$ ($-0.319$, $-0.067$) }& \DIFadd{0.019}\\
+& \DIFadd{Left controllability }& \DIFadd{138 }& \DIFadd{0.649 }& \DIFadd{0.825 }& \DIFadd{$-0.176$ ($-0.292$, $-0.058$) }& \DIFadd{0.033}\\
+& \DIFadd{Right controllability }& \DIFadd{138 }& \DIFadd{0.454 }& \DIFadd{0.825 }& \DIFadd{$-0.370$ ($-0.499$, $-0.238$) }& \DIFadd{0.004}\\
+& \DIFadd{Topology }& \DIFadd{138 }& \DIFadd{0.490 }& \DIFadd{0.825 }& \DIFadd{$-0.335$ ($-0.456$, $-0.212$) }& \DIFadd{0.004}\\
+& \DIFadd{Combined }& \DIFadd{138 }& \DIFadd{0.808 }& \DIFadd{0.825 }& \DIFadd{$-0.016$ ($-0.042$, 0.006) }& \DIFadd{1.000}\\
+\addlinespace
+\DIFadd{CN vs SMC }& \DIFadd{Global controllability }& \DIFadd{132 }& \DIFadd{0.606 }& \DIFadd{0.635 }& \DIFadd{$-0.029$ ($-0.194$, 0.138) }& \DIFadd{1.000}\\
+& \DIFadd{Left controllability }& \DIFadd{132 }& \DIFadd{0.577 }& \DIFadd{0.635 }& \DIFadd{$-0.057$ ($-0.214$, 0.105) }& \DIFadd{1.000}\\
+& \DIFadd{Right controllability }& \DIFadd{132 }& \DIFadd{0.632 }& \DIFadd{0.635 }& \DIFadd{$-0.003$ ($-0.165$, 0.163) }& \DIFadd{1.000}\\
+& \DIFadd{Topology }& \DIFadd{132 }& \DIFadd{0.672 }& \DIFadd{0.635 }& \DIFadd{0.037 ($-0.119$, 0.199) }& \DIFadd{1.000}\\
+& \DIFadd{Combined }& \DIFadd{132 }& \DIFadd{0.697 }& \DIFadd{0.635 }& \DIFadd{0.062 ($-0.028$, 0.153) }& \DIFadd{1.000}\\
+\bottomrule
+\end{longtable}
+\footnotesize\DIFadd{\textit{Note:} Candidate and volume models used identical subjects, cross-validation splits, and the same random seed as Table~II. Confidence intervals used 5,000 group-stratified resamples of fixed averaged OOF scores and therefore do not include model-refitting variability. Paired score-swap tests were Holm corrected across 20 comparisons.
+}\end{landscape}
+
+\begin{table}[!htbp]
+\color{blue}
+\centering
+\caption{\DIFaddFL{Reconstructed query inventory and partial cohort-selection audit from the ADNI exports and analysis archive.}}
+\label{tab:cohort_flow_audit}
+\footnotesize
+\begin{tabular}{p{0.29\textwidth}rrp{0.36\textwidth}}
+\toprule
+\DIFaddFL{Stage }& \DIFaddFL{Individuals }& \DIFaddFL{Sessions/series }& \DIFaddFL{Rule or audit status}\\
+\midrule
+\DIFaddFL{MRIQC export: all imaging-series rows }& \DIFaddFL{3,194 }& \DIFaddFL{92,098 }& \DIFaddFL{Imaging-series export used for analysis}\\
+\DIFaddFL{3.0~T diffusion-MRI query }& \DIFaddFL{1,860 }& \DIFaddFL{5,793 }& \DIFaddFL{dMRI and 3.0~T}\\
+\DIFaddFL{Unique participant-date sessions }& \DIFaddFL{1,860 }& \DIFaddFL{4,566 }& \DIFaddFL{Same-date series collapsed; lower image ID broke ties}\\
+\DIFaddFL{Eligibility and deterministic session selection }& \DIFaddFL{-- }& \DIFaddFL{-- }& \DIFaddFL{Complete gradients/phase encoding, matched T1, usable QC, successful registration/tractography/connectome; earliest eligible date}\\
+\DIFaddFL{Previous revised cohort }& \DIFaddFL{240 }& \DIFaddFL{240 }& \DIFaddFL{CN 110, SMC 18, MCI 88, AD 24; all retained}\\
+\DIFaddFL{Additional eligible participants }& \DIFaddFL{41 }& \DIFaddFL{41 }& \DIFaddFL{SMC 9 and AD 32; same eligibility criteria}\\
+\DIFaddFL{Final primary cohort }& \DIFaddFL{281 }& \DIFaddFL{281 }& \DIFaddFL{One selected session per participant; CN 110, SMC 27, MCI 88, AD 56}\\
+\bottomrule
+\end{tabular}
+\par\vspace{1mm}
+\footnotesize{\textit{Note:} A session was a unique participant-date combination. Same-date diffusion series were resolved using the lower numeric image identifier; when several eligible dates remained, the earliest eligible date was selected. The final cohort retained the previous 240 participants and added 41 eligible participants identified during the re-audit. The query and final session inventory were recoverable, whereas intermediate historical exclusion counts and reasons were not fully preserved; the table is therefore labeled as a partial audit rather than a complete prospective flow.}
+\end{table}
+
+%DIF >  Begin inlined acquisition_cells_R2.tex
+%DIF >  Generated from the corrected final NIfTI input manifest.
+\begin{landscape}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{longtable}{lllllrrrrrrr}
+\caption{\DIFadd{Cross-classification of clinical group by ADNI phase, site, scanner, and principal diffusion-protocol characteristics.}}\label{tab:acquisition_cells} \\
+\toprule
+\DIFadd{Phase }& \DIFadd{Site }& \DIFadd{Manufacturer }& \DIFadd{Model }& \DIFadd{Acceleration }& \DIFadd{NIfTI volumes }& \DIFadd{Slice (mm) }& \DIFadd{CN }& \DIFadd{SMC }& \DIFadd{MCI }& \DIFadd{AD }& \DIFadd{Total }\\
+\midrule
+\endfirsthead
+\multicolumn{12}{c}{\tablename\DIFadd{\ \thetable{} -- continued}} \\
+\toprule
+\DIFadd{Phase }& \DIFadd{Site }& \DIFadd{Manufacturer }& \DIFadd{Model }& \DIFadd{Acceleration }& \DIFadd{NIfTI volumes }& \DIFadd{Slice (mm) }& \DIFadd{CN }& \DIFadd{SMC }& \DIFadd{MCI }& \DIFadd{AD }& \DIFadd{Total }\\
+\midrule
+\endhead
+\midrule
+\multicolumn{12}{r}{\DIFadd{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+\DIFadd{ADNI3 }& \DIFadd{168 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{5 }& \DIFadd{0 }& \DIFadd{7 }& \DIFadd{7 }& \DIFadd{19 }\\
+\DIFadd{ADNI3 }& \DIFadd{135 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750w }& \DIFadd{Accelerated }& \DIFadd{36 }& \DIFadd{2.0 }& \DIFadd{4 }& \DIFadd{0 }& \DIFadd{8 }& \DIFadd{4 }& \DIFadd{16 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{127 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{2 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{6 }& \DIFadd{11 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{27 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{2 }& \DIFadd{6 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{9 }\\
+\DIFadd{ADNI3 }& \DIFadd{3 }& \DIFadd{Siemens }& \DIFadd{Prisma }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{4 }& \DIFadd{0 }& \DIFadd{5 }& \DIFadd{0 }& \DIFadd{9 }\\
+\DIFadd{ADNI3 }& \DIFadd{35 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{4 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{1 }& \DIFadd{7 }\\
+\DIFadd{ADNI3 }& \DIFadd{127 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.0 }& \DIFadd{4 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{2 }& \DIFadd{7 }\\
+\DIFadd{ADNI3 }& \DIFadd{141 }& \DIFadd{Siemens }& \DIFadd{Verio }& \DIFadd{Unaccelerated }& \DIFadd{31 }& \DIFadd{2.0 }& \DIFadd{5 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{7 }\\
+\DIFadd{ADNI3 }& \DIFadd{109 }& \DIFadd{Siemens }& \DIFadd{TrioTim }& \DIFadd{Accelerated }& \DIFadd{31 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{7 }& \DIFadd{0 }& \DIFadd{7 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{16 }& \DIFadd{GE }& \DIFadd{Signa HDxt }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{7 }& \DIFadd{7 }\\
+\DIFadd{ADNI3 }& \DIFadd{116 }& \DIFadd{Siemens }& \DIFadd{TrioTim }& \DIFadd{Accelerated }& \DIFadd{31 }& \DIFadd{2.0 }& \DIFadd{4 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }& \DIFadd{6 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{3 }& \DIFadd{GE }& \DIFadd{Signa HDxt }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.7 }& \DIFadd{3 }& \DIFadd{1 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{6 }\\
+\DIFadd{ADNI3 }& \DIFadd{14 }& \DIFadd{Siemens }& \DIFadd{Verio }& \DIFadd{Accelerated }& \DIFadd{31 }& \DIFadd{2.0 }& \DIFadd{4 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{6 }\\
+\DIFadd{ADNI3 }& \DIFadd{37 }& \DIFadd{Siemens }& \DIFadd{Prisma }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{6 }\\
+\DIFadd{ADNI3 }& \DIFadd{41 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{6 }\\
+\DIFadd{ADNI3 }& \DIFadd{129 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{1 }& \DIFadd{5 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{3 }& \DIFadd{GE }& \DIFadd{Signa HDxt }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{2 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{5 }\\
+\DIFadd{ADNI3 }& \DIFadd{82 }& \DIFadd{Siemens }& \DIFadd{Verio }& \DIFadd{Accelerated }& \DIFadd{31 }& \DIFadd{2.0 }& \DIFadd{4 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{5 }\\
+\DIFadd{ADNI3 }& \DIFadd{13 }& \DIFadd{Siemens }& \DIFadd{Biograph\_mMR }& \DIFadd{Accelerated }& \DIFadd{31 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{1 }& \DIFadd{4 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{29 }& \DIFadd{GE }& \DIFadd{Signa HDxt }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{1 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{4 }\\
+\DIFadd{ADNI3 }& \DIFadd{11 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{4 }\\
+\DIFadd{ADNI3 }& \DIFadd{12 }& \DIFadd{Siemens }& \DIFadd{Prisma }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{4 }\\
+\DIFadd{ADNI3 }& \DIFadd{27 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{4 }\\
+\DIFadd{ADNI3 }& \DIFadd{68 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{4 }\\
+\DIFadd{ADNI3 }& \DIFadd{70 }& \DIFadd{Siemens }& \DIFadd{TrioTim }& \DIFadd{Accelerated }& \DIFadd{31 }& \DIFadd{2.0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{4 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{7 }& \DIFadd{GE }& \DIFadd{Signa HDxt }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.7 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{4 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{98 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{4 }\\
+\DIFadd{ADNI3 }& \DIFadd{137 }& \DIFadd{Siemens }& \DIFadd{Skyra }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{4 }& \DIFadd{0 }& \DIFadd{4 }\\
+\DIFadd{ADNI3 }& \DIFadd{9 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750w }& \DIFadd{Accelerated }& \DIFadd{36 }& \DIFadd{2.0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{3 }\\
+\DIFadd{ADNI3 }& \DIFadd{16 }& \DIFadd{Siemens }& \DIFadd{Skyra }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{3 }\\
+\DIFadd{ADNI3 }& \DIFadd{20 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{2 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{3 }\\
+\DIFadd{ADNI3 }& \DIFadd{22 }& \DIFadd{Siemens }& \DIFadd{TrioTim }& \DIFadd{Accelerated }& \DIFadd{31 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{1 }& \DIFadd{3 }\\
+\DIFadd{ADNI3 }& \DIFadd{33 }& \DIFadd{Siemens }& \DIFadd{Skyra }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{3 }\\
+\DIFadd{ADNI3 }& \DIFadd{98 }& \DIFadd{GE }& \DIFadd{SIGNA Premier }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{3 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{21 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{68 }& \DIFadd{2.7 }& \DIFadd{1 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{3 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{27 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.7 }& \DIFadd{2 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{3 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{126 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{3 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{127 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{68 }& \DIFadd{2.7 }& \DIFadd{1 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{3 }\\
+\DIFadd{ADNI3 }& \DIFadd{32 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{3 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{3 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{5 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{3 }& \DIFadd{3 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{7 }& \DIFadd{GE }& \DIFadd{Signa HDxt }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{3 }& \DIFadd{3 }\\
+\DIFadd{ADNI3 }& \DIFadd{2 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNI3 }& \DIFadd{24 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNI3 }& \DIFadd{37 }& \DIFadd{Siemens }& \DIFadd{Prisma }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNI3 }& \DIFadd{114 }& \DIFadd{Siemens }& \DIFadd{Verio }& \DIFadd{Unaccelerated }& \DIFadd{31 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNI3 }& \DIFadd{126 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{2 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{21 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.7 }& \DIFadd{1 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{27 }& \DIFadd{GE }& \DIFadd{Signa HDxt }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }& \DIFadd{2 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{94 }& \DIFadd{GE }& \DIFadd{Signa HDxt }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{2 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{99 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{126 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{68 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{127 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNI3 }& \DIFadd{21 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{27 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750w }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{2 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{57 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{129 }& \DIFadd{GE }& \DIFadd{SIGNA HDx }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.7 }& \DIFadd{2 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{2 }\\
+\DIFadd{ADNI3 }& \DIFadd{2 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{5 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{21 }& \DIFadd{GE }& \DIFadd{SIGNA UHP }& \DIFadd{Accelerated }& \DIFadd{36 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{29 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750w }& \DIFadd{Accelerated }& \DIFadd{36 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{36 }& \DIFadd{Siemens }& \DIFadd{Skyra }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{36 }& \DIFadd{Siemens }& \DIFadd{Skyra }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{94 }& \DIFadd{Siemens }& \DIFadd{Prisma }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{127 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{128 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750w }& \DIFadd{Accelerated }& \DIFadd{36 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{129 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{22 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{135 }& \DIFadd{GE }& \DIFadd{SIGNA Premier }& \DIFadd{Accelerated }& \DIFadd{36 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{168 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{42 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI3 }& \DIFadd{941 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{2.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNI4 }& \DIFadd{389 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }\\
+\DIFadd{ADNI4 }& \DIFadd{941 }& \DIFadd{Siemens }& \DIFadd{Prisma\_fit }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{21 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{27 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750w }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{37 }& \DIFadd{Siemens }& \DIFadd{Prisma }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{52 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{52 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{68 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{52 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{127 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{57 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.7 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{68 }& \DIFadd{Siemens }& \DIFadd{Verio }& \DIFadd{Accelerated }& \DIFadd{55 }& \DIFadd{3.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{98 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Accelerated }& \DIFadd{54 }& \DIFadd{2.7 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{99 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750 }& \DIFadd{Unaccelerated }& \DIFadd{54 }& \DIFadd{5.0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{109 }& \DIFadd{GE }& \DIFadd{Signa HDxt }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{129 }& \DIFadd{GE }& \DIFadd{SIGNA HDx }& \DIFadd{Accelerated }& \DIFadd{46 }& \DIFadd{2.7 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }\\
+\DIFadd{ADNIGO/ADNI2 }& \DIFadd{135 }& \DIFadd{GE }& \DIFadd{DISCOVERY MR750w }& \DIFadd{Accelerated }& \DIFadd{36 }& \DIFadd{2.7 }& \DIFadd{0 }& \DIFadd{0 }& \DIFadd{1 }& \DIFadd{0 }& \DIFadd{1 }\\
+\end{longtable}
+\footnotesize\DIFadd{\textit{Note:} Each row is one observed combination of phase, site, scanner manufacturer and model, acceleration category, final NIfTI-derived diffusion-volume count, and slice thickness. The 84 observed cells comprised 0 cells containing all four groups, 12 containing three groups, 34 containing two groups, and 38 containing one group, demonstrating incomplete crossing of diagnosis and acquisition factors.
+}\end{landscape}
+%DIF >  End inlined acquisition_cells_R2.tex
+
+\begin{landscape}
+\begin{longtable}{p{0.25\linewidth}p{0.08\linewidth}p{0.43\linewidth}p{0.15\linewidth}}
+\caption{\DIFadd{Multiplicity families used in the revised analyses.}}\label{tab:multiplicity_families}\\
+\toprule \DIFadd{Analysis family }& \DIFadd{Tests }& \DIFadd{Definition }& \DIFadd{Correction}\\ \midrule
+\endfirsthead
+\toprule \DIFadd{Analysis family }& \DIFadd{Tests }& \DIFadd{Definition }& \DIFadd{Correction}\\ \midrule
+\endhead
+\DIFadd{Aggregated networks }& \DIFadd{16 }& \DIFadd{Eight networks, separately for average- and modal-rank endpoints }& \DIFadd{BH-FDR within endpoint (8)}\\
+\DIFadd{Tian structure omnibus }& \DIFadd{14 }& \DIFadd{Seven structures, separately for average- and modal-rank endpoints }& \DIFadd{BH-FDR within endpoint (7)}\\
+\DIFadd{Primary hippocampal pairwise }& \DIFadd{12 }& \DIFadd{Six contrasts for each primary rank endpoint }& \DIFadd{BH-FDR across 12}\\
+\DIFadd{Raw-value omnibus }& \DIFadd{2 }& \DIFadd{Raw average and modal controllability }& \DIFadd{BH-FDR across 2}\\
+\DIFadd{Density-adjusted raw omnibus }& \DIFadd{2 }& \DIFadd{Density-adjusted raw average and modal controllability }& \DIFadd{BH-FDR across 2}\\
+\DIFadd{Raw-value pairwise }& \DIFadd{12 }& \DIFadd{Six contrasts for each raw endpoint }& \DIFadd{BH-FDR across 12}\\
+\DIFadd{Hippocampal long axis }& \DIFadd{8 }& \DIFadd{Four subdivisions, separately by endpoint }& \DIFadd{BH-FDR within endpoint (4)}\\
+\DIFadd{Cognition associations }& \DIFadd{10 }& \DIFadd{Two rank-based controllability endpoints by five cognitive outcomes, adjusted for age, sex, and education }& \DIFadd{BH-FDR across 10}\\
+\DIFadd{Matched FreeSurfer cognition }& \DIFadd{15 }& \DIFadd{Three imaging measures by five cognitive outcomes }& \DIFadd{BH-FDR across 15}\\
+\DIFadd{Topology group contrasts }& \DIFadd{4 }& \DIFadd{Four exploratory contrasts for hippocampal betweenness }& \DIFadd{BH-FDR across 4}\\
+\DIFadd{Topology--controllability }& \DIFadd{4 }& \DIFadd{Two unranked endpoints by strength and betweenness }& \DIFadd{BH-FDR across 4}\\
+\DIFadd{Incremental cognitive models }& \DIFadd{5 }& \DIFadd{Five cognitive outcomes }& \DIFadd{BH-FDR across 5}\\
+\DIFadd{Biomarker sensitivity }& \DIFadd{16 }& \DIFadd{Two endpoints within biomarker, window, and tested-effect strata }& \DIFadd{BH-FDR within each 2-test family}\\
+\DIFadd{Low-coverage exclusion sensitivity }& \DIFadd{2 }& \DIFadd{Average- and modal-rank group effects after excluding five review-trigger cases }& \DIFadd{BH-FDR across 2}\\
+\DIFadd{Low-dimensional classification }& \DIFadd{24 }& \DIFadd{Six feature sets in four tasks }& \DIFadd{Holm across 24}\\
+\DIFadd{Paired classification comparisons }& \DIFadd{20 }& \DIFadd{Five candidate-versus-volume comparisons in four tasks }& \DIFadd{Holm across 20}\\
+\bottomrule
+\end{longtable}
+\footnotesize\noindent\DIFadd{\textit{Note:} BH-FDR, Benjamini--Hochberg false discovery rate correction; Holm, Holm familywise error rate correction.}
+\end{landscape}
+
+\begin{table}[!htbp]
+\color{blue}
+\centering
+\caption{\DIFaddFL{Acquisition-overlap diagnostics and design-balanced sensitivity analyses.}}
+\label{tab:acquisition_overlap}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\DIFaddFL{\textbf{A. Omnibus results and balance diagnostics}}\par\vspace{1mm}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}Xccccc@{}}
+\toprule
+\DIFaddFL{Analysis }& \DIFaddFL{Endpoint or diagnostic }& \DIFaddFL{$n$ or ESS }& \DIFaddFL{Statistic }& \DIFaddFL{$p$ }& \DIFaddFL{$p_{\mathrm{FDR}}$ }& \DIFaddFL{Partial $\eta^2$}\\
+\midrule
+\DIFaddFL{Strict covariate adjustment }& \DIFaddFL{Average rank }& \DIFaddFL{281 }& \DIFaddFL{$F_{3,210}=4.368$ }& \DIFaddFL{0.0057 }& \DIFaddFL{0.0093 }& \DIFaddFL{0.059}\\
+& \DIFaddFL{Modal rank }& \DIFaddFL{281 }& \DIFaddFL{$F_{3,210}=3.977$ }& \DIFaddFL{0.0093 }& \DIFaddFL{0.0093 }& \DIFaddFL{0.054}\\
+\addlinespace
+\DIFaddFL{Generalized overlap weighting }& \DIFaddFL{Overall effective sample size }& \DIFaddFL{45.2 }& \DIFaddFL{Max pairwise SMD: 1.640 to 1.042 }& \DIFaddFL{-- }& \DIFaddFL{-- }& \DIFaddFL{--}\\
+& \DIFaddFL{Average rank }& \DIFaddFL{45.2 }& \DIFaddFL{Wald $\chi^2_3=8.875$ }& \DIFaddFL{0.0310 }& \DIFaddFL{0.0310 }& \DIFaddFL{0.098}\\
+& \DIFaddFL{Modal rank }& \DIFaddFL{45.2 }& \DIFaddFL{Wald $\chi^2_3=8.979$ }& \DIFaddFL{0.0296 }& \DIFaddFL{0.0310 }& \DIFaddFL{0.099}\\
+\addlinespace
+\DIFaddFL{Connected exact-cell common support }& \DIFaddFL{Average rank }& \DIFaddFL{218 }& \DIFaddFL{$F_{3,164}=5.663$ }& \DIFaddFL{0.0014 }& \DIFaddFL{0.0025 }& \DIFaddFL{0.094}\\
+& \DIFaddFL{Modal rank }& \DIFaddFL{218 }& \DIFaddFL{$F_{3,164}=5.112$ }& \DIFaddFL{0.0025 }& \DIFaddFL{0.0025 }& \DIFaddFL{0.086}\\
+\addlinespace
+\DIFaddFL{All-four-groups-per-cell restriction }& \DIFaddFL{Feasibility diagnostic }& \DIFaddFL{0 }& \DIFaddFL{No exact cell contained all four groups }& \DIFaddFL{-- }& \DIFaddFL{-- }& \DIFaddFL{--}\\
+\bottomrule
+\end{tabularx}
+\par\vspace{3mm}
+\DIFaddFL{\textbf{B. Covariate-adjusted estimates in the connected exact-cell common-support sample}}\par\vspace{1mm}
+\begin{tabular}{llrrr}
+\toprule
+\DIFaddFL{Endpoint }& \DIFaddFL{Group }& \DIFaddFL{$n$ }& \DIFaddFL{Adjusted mean }& \DIFaddFL{95\% CI}\\
+\midrule
+\DIFaddFL{Average rank }& \DIFaddFL{CN }& \DIFaddFL{93 }& \DIFaddFL{345.73 }& \DIFaddFL{325.44--366.01}\\
+& \DIFaddFL{SMC }& \DIFaddFL{24 }& \DIFaddFL{383.14 }& \DIFaddFL{340.41--425.87}\\
+& \DIFaddFL{MCI }& \DIFaddFL{66 }& \DIFaddFL{321.88 }& \DIFaddFL{297.12--346.63}\\
+& \DIFaddFL{AD }& \DIFaddFL{35 }& \DIFaddFL{286.03 }& \DIFaddFL{255.84--316.23}\\
+\addlinespace
+\DIFaddFL{Modal rank }& \DIFaddFL{CN }& \DIFaddFL{93 }& \DIFaddFL{107.18 }& \DIFaddFL{86.21--128.16}\\
+& \DIFaddFL{SMC }& \DIFaddFL{24 }& \DIFaddFL{69.41 }& \DIFaddFL{25.86--112.95}\\
+& \DIFaddFL{MCI }& \DIFaddFL{66 }& \DIFaddFL{131.06 }& \DIFaddFL{105.22--156.91}\\
+& \DIFaddFL{AD }& \DIFaddFL{35 }& \DIFaddFL{165.42 }& \DIFaddFL{134.52--196.32}\\
+\bottomrule
+\end{tabular}
+\par\vspace{1mm}
+\footnotesize{\textit{Note:} The strict model included 12 scanner-model, three phase, 43 site, two acceleration, nine NIfTI-derived diffusion-volume-count, and four slice-thickness levels, together with age, sex, education, and two motion measures; the nominal 76-column full design had rank 71 with 210 residual degrees of freedom. Group-specific overlap-weighting effective sample sizes were 34.8 CN, 11.5 SMC, 6.7 MCI, and 20.9 AD. The weighted partial-$\eta^2$ bootstrap 95\% CIs were 0.032--0.298 for average rank and 0.031--0.292 for modal rank. Residual balance remained inadequate, so weighted results are diagnostic irrespective of their nominal tests. The connected analysis retained 46 exact acquisition cells containing at least two groups and required direct shared-cell support for all six group pairs; permutations were restricted within cell. Direct SMC--MCI support comprised four cells with five SMC and six MCI participants. No exact cell contained all four groups. BH-FDR correction was applied across the two endpoints within each estimable analysis. SMD, standardized mean difference; ESS, effective sample size.}
+\end{table}
+
+\begin{table}[!htbp]
+\color{blue}
+\centering
+\caption{\DIFaddFL{Diffusion-protocol distribution and retrospective registration/label-placement QC.}}
+\label{tab:protocol_qc_summary}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.34\textwidth}X@{}}
+\toprule
+\DIFaddFL{Item }& \DIFaddFL{Result}\\
+\midrule
+\DIFaddFL{Software }& \DIFaddFL{MRtrix3 3.0.6; FSL 6.0.7.18, including FLIRT}\\
+\DIFaddFL{NIfTI-derived total-volume categories }& \DIFaddFL{22 (1), 31 (44), 36 (24), 42 (1), 46 (61), 54 (39), 55 (87), 68 (9), and 127 (15)}\\
+\DIFaddFL{Observed b-value shell sets }& \DIFaddFL{$b=0/1000$, $b=0/1300$, and $b=0/500/1000/2000$~s/mm$^2$}\\
+\DIFaddFL{Observed b0-count categories }& \DIFaddFL{1, 4, 5, 6, 7, 8, and 13}\\
+\DIFaddFL{Observed nonzero diffusion-weighted volume-count categories }& \DIFaddFL{16, 30, 32, 36, 41, 48, 60, and 114}\\
+\DIFaddFL{Protocol strata: $b=0/1000$ }& \DIFaddFL{257 participants: b0/nonzero counts 6/16 (1), 1/30 (44), 4/32 (24), 6/36 (1), 5/41 (61), 6/48 (39), and 7/48 (87)}\\
+\DIFaddFL{Protocol strata: $b=0/1300$ }& \DIFaddFL{9 participants: b0/nonzero count 8/60}\\
+\DIFaddFL{Protocol strata: $b=0/500/1000/2000$ }& \DIFaddFL{15 participants: b0/nonzero count 13/114}\\
+\DIFaddFL{Response/FOD commands }& \DIFaddFL{\texttt{dwi2response dhollander} and \texttt{dwi2fod msmt\_csd} were applied to every dataset}\\
+\DIFaddFL{Connectome scaling }& \DIFaddFL{\texttt{-scale\_invnodevol}: $A_{ij}=2\sum_{s\in S_{ij}}w_s/(N_i+N_j)$, where $N_i$ and $N_j$ are node-label voxel counts}\\
+\DIFaddFL{Phase-encoding metadata }& \DIFaddFL{BIDS directions $i$ (2), $j$ (244), and $j-$ (35) in the retrospective input audit; all 15 127-volume inputs were PA; reverse phase-encoding pairs were not used for susceptibility correction}\\
+\DIFaddFL{Retrospective quantitative QC completed }& \DIFaddFL{281/281 participants}\\
+\DIFaddFL{Brain-mask Dice }& \DIFaddFL{Mean 0.917; 0/281 below 0.70}\\
+\DIFaddFL{Hippocampal-label coverage in DWI brain mask }& \DIFaddFL{Mean 0.992; 5/281 below 0.90 (CN 1, SMC 0, MCI 2, AD 2)}\\
+\DIFaddFL{Manual review of coverage-trigger cases }& \DIFaddFL{Acceptable T1--DWI registration and hippocampal-label placement confirmed in all five cases; no gross misregistration or erroneous hippocampal localization}\\
+\DIFaddFL{Bilateral hippocampal labels present }& \DIFaddFL{281/281 participants}\\
+\DIFaddFL{QC montage generation }& \DIFaddFL{Registration, 281/281; hippocampal placement, 280/281; the one montage-generation failure was display-only and retained complete quantitative QC}\\
+\DIFaddFL{Existing connectome availability and numerical checks }& \DIFaddFL{281/281 matrices available; all passed dimension, finite-value, non-negativity, symmetry, and zero-diagonal checks}\\
+\DIFaddFL{Additional exclusions during retrospective audit }& \DIFaddFL{Registration, 0; tractography/connectome availability, 0; QC thresholds, 0}\\
+\DIFaddFL{Sensitivity excluding five coverage-trigger cases }& \DIFaddFL{$n=276$ (CN 109, SMC 27, MCI 86, AD 54); average rank $F_{3,269}=5.554$, $p_{\mathrm{FDR}}=0.0017$, partial $\eta^2=0.058$; modal rank $F_{3,269}=5.264$, $p_{\mathrm{FDR}}=0.0017$, partial $\eta^2=0.055$}\\
+\bottomrule
+\end{tabularx}
+\par\vspace{1mm}
+\footnotesize{\textit{Note:} Counts in parentheses are participants in the final NIfTI input categories. All 127-volume inputs were PA acquisitions and each contained 13 b0 and 114 nonzero diffusion-weighted volumes. Dice and coverage are gross-overlap checks and do not prove anatomical localization accuracy. QC thresholds were review triggers rather than post hoc exclusion rules. The two exclusion-sensitivity tests formed one BH-FDR family. Candidate-level failure counts preceding formation of the final 281-participant analytic cohort were not available in the archived processing records.}
+\end{table}
+%DIF >  End inlined supplementary_new_tables.tex
+\endgroup
+
+\DIFaddend \FloatBarrier
+
+\section{Supplementary Figures}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{SI_1.pdf}
+    \caption{Descriptive cortical spatial distributions of average and modal controllability across clinically defined groups. (A) Average controllability and (B) modal controllability were averaged within each group and mapped to the Schaefer2018 cortical surface. A common color scale was used across CN, SMC, MCI, and AD within each metric to permit visual comparison. These maps are descriptive only; no parcel-level inference was performed, and visual differences should not be interpreted as statistically significant.}
+    \label{fig:SI_figure1}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{SI_2.pdf}
+    \caption{Descriptive structural-connectivity patterns of the hippocampus and Tian atlas-defined non-cortical structures across clinically defined groups. (A) Major hippocampal connections retained for visualization. (B) Mean connectivity between the hippocampus and the visual (VN), somatomotor (SMN), dorsal attention (DAN), ventral attention (VAN), limbic (LN), frontoparietal (FPN), default mode (DMN), and atlas-defined non-cortical (NonCor) target groups. (C) Major connections between Tian atlas-defined structures and cortical networks. (D) Mean connectivity between Tian atlas-defined structures and cortical networks. A common display threshold was used only to improve visualization and was not applied to inferential analyses; between-group visual differences should therefore be interpreted descriptively.}
+    \label{fig:SI_figure2}
+\DIFaddbeginFL \end{figure}
+
+\begin{figure}[!htbp]
+    \color{blue}
+    \centering
+    \setlength{\tabcolsep}{2pt}
+    \begin{tabular}{cccc}
+    \DIFaddFL{\textbf{CN} }& \DIFaddFL{\textbf{SMC} }& \DIFaddFL{\textbf{MCI} }& \DIFaddFL{\textbf{AD}}\\
+    \includegraphics[width=0.235\linewidth]{qc_overlays/qc_CN_registration.png} &
+    \includegraphics[width=0.235\linewidth]{qc_overlays/qc_SMC_registration.png} &
+    \includegraphics[width=0.235\linewidth]{qc_overlays/qc_MCI_registration.png} &
+    \includegraphics[width=0.235\linewidth]{qc_overlays/qc_AD_registration.png}\\
+    \includegraphics[width=0.235\linewidth]{qc_overlays/qc_CN_hippocampus.png} &
+    \includegraphics[width=0.235\linewidth]{qc_overlays/qc_SMC_hippocampus.png} &
+    \includegraphics[width=0.235\linewidth]{qc_overlays/qc_MCI_hippocampus.png} &
+    \includegraphics[width=0.235\linewidth]{qc_overlays/qc_AD_hippocampus.png}
+    \end{tabular}
+    \caption{\DIFaddFL{Representative retrospective registration and hippocampal-label-placement QC overlays. Columns show one CN, SMC, MCI, and AD participant selected near the cohort median brain-mask Dice value with complete hippocampal coverage. The top row shows the transformed T1-derived brain-mask contour over the mean b0 image; the bottom row shows transformed bilateral hippocampal-label contours over the mean b0 image. These examples illustrate the QC display, whereas quantitative registration and label-coverage metrics were computed for all 281 participants.}}
+    \label{fig:registration_qc_overlays}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \color{blue}
+    \centering
+    \includegraphics[width=0.82\linewidth]{qc_overlays/hippocampus_QC.png}
+    \caption{\DIFaddFL{Example hippocampal-label overlay from a review-trigger case in the CN group. The transformed bilateral hippocampal-label coverage within the DWI brain mask was 0.894. Manual inspection confirmed acceptable T1--DWI registration and hippocampal-label placement without gross misregistration or erroneous hippocampal localization. The coverage threshold was used to trigger review rather than automatic exclusion; the primary group effects were retained after excluding all five coverage-trigger cases (Supplementary Table~S21).}}
+    \label{fig:low_coverage_qc_example}
+\DIFaddendFL \end{figure}
+
+\FloatBarrier
+\end{document}
